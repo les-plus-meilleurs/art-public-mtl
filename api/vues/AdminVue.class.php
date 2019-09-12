@@ -133,8 +133,7 @@ class AdminVue {
 
 							extract($aData);
                             
-							?>
-                            
+							?>                        
                             
                 
 							<section class="oeuvre flex flex-row">
