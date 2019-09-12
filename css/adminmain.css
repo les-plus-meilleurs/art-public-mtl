@@ -128,9 +128,6 @@ buttons {
 }
 
 
-
-
-
 /**
  * appbar
  */
@@ -168,6 +165,18 @@ buttons {
     /* sticky footer */
     margin-bottom: -100px;
     padding-bottom: 100px;
+}
+
+.menuadmin {
+    display : flex;
+    flex-direction: column;
+    
+}
+
+.r1 {
+    display: flex;
+    flex-direction: column;
+
 }
 
 

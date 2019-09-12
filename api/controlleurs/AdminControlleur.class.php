@@ -29,7 +29,8 @@ class AdminControlleur extends Controlleur
             echo 'MENU ADMIN';
             $oVue = new AdminVue();
     		$oVue->afficheHead();
-    		$oVue->afficheEntete();
+			$oVue->afficheEntete();
+			$oVue->afficheVueAdmin();			
     		$oVue->affichePied();
         } 
         else if(isset($requete->url_elements[0]) && $requete->url_elements[0]=='')	// Normalement l'id de l'artiste 
