@@ -77,7 +77,7 @@ class AdminControlleur extends Controlleur
 		{
 			/* Instanciation du controlleur */
             $nomControlleur = ucfirst($requete->url_elements[0]) . 'AdminControlleur';
-            //echo $nomControlleur;
+            //var_dump($nomControlleur);
             if (class_exists($nomControlleur)) {
                 $oControlleur = new $nomControlleur();
                 $nomAction = strtolower($requete->verbe) . 'Action';

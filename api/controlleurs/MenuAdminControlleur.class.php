@@ -19,9 +19,9 @@
  
 class MenuAdminControlleur extends Controlleur
 {
-   
     public function getAction(Requete $requete)
     {
+        echo '<br>' . $requete->url_elements[1];
         $oVue = new MenuAdminVue();
         $oVue->afficheHead();
         $oVue->afficheEntete();
