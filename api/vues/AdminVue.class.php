@@ -30,6 +30,7 @@ class AdminVue {
 		    <meta charset="utf-8">
 		    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		    <meta name="description" content="">
+<<<<<<< HEAD
 		    <meta name="viewport" content="width=device-width">		    
 		    <link rel="stylesheet" href="<?php echo BASE_URL."css/flex.css"?>" type="text/css" media="screen">
 		    <link rel="stylesheet" href="<?php echo BASE_URL."css/adminmain.css"?>" type="text/css" media="screen">
@@ -39,6 +40,15 @@ class AdminVue {
 			
 		    <script src="<?php echo BASE_URL."js/define.js"?>"></script>
 		    <script src="<?php echo BASE_URL."js/admin.js"?>"></script>
+=======
+		    <meta name="viewport" content="width=device-width">
+		    
+		    <link rel="stylesheet" href="../css/flex.css" type="text/css" media="screen">
+		    <link rel="stylesheet" href="../css/adminmain.css" type="text/css" media="screen">
+		    
+		    <script src="../js/define.js"></script>
+		    <script src="../js/admin.js"></script>
+>>>>>>> 640b235101dfc9f575e691ccd6af02d7ef207572
 		</head>
 		<?php
 		
@@ -135,8 +145,7 @@ class AdminVue {
 
 							extract($aData);
                             
-							?>
-                            
+							?>                        
                             
                 
 							<section class="oeuvre flex flex-row">
@@ -156,6 +165,41 @@ class AdminVue {
 				
 			</section>
 			
+		<?php
+		
+	}
+
+	public function afficheVueAdmin() {
+		
+		?>
+		<section id='menuadmin'></section>	
+			<section id='r1'>
+				<fieldset id='oeuvres'>
+					<legend>Oeuvres</legend>
+					<a href="">Ajouter une oeuvre</a><br>
+					<a href="">Modifier une oeuvre</a><br>
+					<a href="">Effacer une oeuvre</a>
+				</fieldset>
+				<fieldset id='parcour'>
+					<legend>Parcours</legend>
+					<a href="">Modifier une parcours</a><br>
+					<a href="">Ajouter une parcours</a>		
+				</fieldset>
+			</section>
+			<section class='r2'>
+				<fieldset id='utilisateur'>
+					<legend>Utilisateurs</legend>
+					<a href="">Ajouter une utilisateur</a><br>
+					<a href="">Modifier une utilisateur</a><br>
+					<a href="">Effacer une utilisateur</a>	
+				</fieldset>
+				<fieldset id='artiste'>
+					<legend>Artistes</legend>
+					<a href="">Modifier une artiste</a><br>
+					<a href="">Effacer une utilisateurs</a>	
+				</fieldset>
+			</section>
+		</section>	
 		<?php
 		
 	}
