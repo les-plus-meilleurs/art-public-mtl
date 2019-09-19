@@ -20,6 +20,7 @@ class AdminVue {
 	 * @access public
 	 * @return void
 	 */
+<<<<<<< HEAD
 	public function afficheHead() {
 		?>
 		<!DOCTYPE html>
@@ -47,6 +48,10 @@ class AdminVue {
 		    <script src="../../js/admin.js"></script>
 		</head>
 		<?php
+=======
+	public function afficheEntete() {
+        require("entetepied/enteteAdmin.html.php");
+>>>>>>> 15beada29c09abb0e7e00d97a84ba47474c0ddf6
 		
 	}
 
@@ -55,17 +60,6 @@ class AdminVue {
 	 * @access public
 	 * @return void
 	 */
-	public function afficheEntete() {
-		?>
-	<body>
-	    <main>
-	        <header class="appbar">
-	            <h1><a href="/art-public-mtl/api/admin">ART PUBLIC MONTREAL - ADMINISTRATEUR</a></h1> 
-	        </header>
-			
-		<?php
-		
-	}
 
 
 	/**
@@ -74,18 +68,8 @@ class AdminVue {
 	 * @return void
 	 */
 	public function affichePied() {
-		?>
-	
-			<footer>
-				Certains droits réservés @ Jonathan Martel (2019)<br>
-				Sous licence Creative Commons (BY-NC 3.0)
-			</footer>
-		</main>
-	</body>
-</html>
-
-		<?php
-		
+ 
+		require("entetepied/piedAdmin.html.php");
 	}
 	
 
@@ -97,32 +81,7 @@ class AdminVue {
 	 */
 	public function afficheOeuvres($aData = Array()) {
 		
-		?>
-		 <section class="contenu listeOeuvres">
-         	<section class="recherche"></section>
-            <section class="oeuvres flex flex-col">
-						<?php
-                        
-						foreach ($aData as $cle => $oeuvre) {
-							extract($oeuvre);
-                           
-							?>
-							<section class="oeuvre flex flex-row">
-			                    <span class="titre"><?php echo $Titre ?> - </span>
-			                    <span class ="description"> <?php echo $Description ?> - </span>
-			                    <span class="arrondissement"><?php echo $Arrondissement ?></span>
-		                    <span class="action flex-droite"><!--	<a href="/art-public-mtl/api/admin/oeuvre/<?php echo $id ?>">[x]</a>--> <a href="/art-public-mtl/api/admin/oeuvre/<?php echo $id ?>">[Modifier descripion]</a></span>
-			                    
-			                </section>
-
-							<?php
-						}
-						?>
-					</section>
-				
-			</section>
-			
-		<?php
+require("admin/AfficheOeuvres.html.php");
 		
 	}
     /**
@@ -132,6 +91,7 @@ class AdminVue {
 	 */
 	public function afficheOeuvre($aData = Array()) {
 		
+<<<<<<< HEAD
 		?>
 		 <section class="contenu listeOeuvres">
          	<section class="recherche"></section>
@@ -162,6 +122,9 @@ class AdminVue {
 			</section>
 			
 		<?php
+=======
+		require("admin/AfficheOeuvre.html.php");
+>>>>>>> 15beada29c09abb0e7e00d97a84ba47474c0ddf6
 		
 	}
 
@@ -202,19 +165,24 @@ class AdminVue {
     
 	public function afficheConnexion() {
 		
+        require("admin/Connexion.html.php");
+		
+	}
+    
+    
+    public function afficheFormulaireModification() {
+		
+	require("admin/FormulaireModification.html.php");
+		
+	}
+    
+	public function afficheDeconnection() {
+		
 		?>
 
-            <form id='connection' action="?controller=authentification&action=connexionPost" method="post">	
+            <form id='deconnection' action="?controller=deconnection&action=deconnectionPost" method="post">	
                 <div>
-                    <label for="name">Nom d'usager:</label>
-                    <input type="text" id="name" name="login">
-                </div>
-                <div>
-                    <label for="mdp">Mot de passe:</label>
-                    <input type="mdp" id="mdp" name="mdp">
-                </div>
-                <div>
-                    <input type="submit" id="envoyer" value="Se connecter">
+                    <input type="submit" id="envoyer" value="Déconnection">
                 </div>		
             </form>
 			
@@ -224,39 +192,7 @@ class AdminVue {
 	
 	public function afficheMenuAdmin() { //location temporaire
 		
-		?>
-		<section id="menuadmin">
-			<h2 id="textMenuAdmin">Menu administrateur</h2>
-			<div id = "fieldset">
-				<fieldset>
-					<legend><p id="textlegend">OEUVRES</p></legend>
-						<a href="">Ajouter</a><br>
-						<a href="">Modifier</a><br>
-						<a href="">Supprimer</a>
-				</fieldset>
-				<fieldset>
-					<legend><p id="textlegend">ARTISTES</p></legend>
-						<a href="">Modifier</a><br>
-						<a href="">Supprimer</a>
-				</fieldset>
-			</div>
-			<div id = "fieldset">
-				<fieldset>
-					<legend><p id="textlegend">PARCOURS</p></legend>
-						<a href="">Ajouter</a><br>
-						<a href="">Modifier</a><br>
-						<a href="">Supprimer</a>
-				</fieldset>
-				<fieldset>
-					<legend><p id="textlegend">ADMINISTRATEUR</p></legend>
-						<a href="">Ajouter</a><br>
-						<a href="">Modifier</a><br>
-						<a href="">Supprimer</a>
-				</fieldset>
-			</div>
-		</section>    
-			
-		<?php
+		require("admin/MenuAdmin.html.php");
 		
 	}
 
