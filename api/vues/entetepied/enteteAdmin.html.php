@@ -19,10 +19,11 @@
 		    <link rel="stylesheet" href="../../css/adminmain.css" type="text/css" media="screen">			
 			<link rel="stylesheet" href="../../css/text.css" type="text/css" media="screen">
 			<link rel="stylesheet" href="../../css/var.css" type="text/css" media="screen">
+			<link rel="stylesheet" href="../../img/icons/logoAP.png" type="text/css" media="screen">
 		</head>
 			<body>
 	    <main>
 	        <header class="appbar">
-	            <h1><a href="/art-public-mtl/api/admin">ART PUBLIC MONTREAL - ADMINISTRATEUR</a></h1> 
+	           <img src="../../img/icons/logoAP.png" alt="logoAP"> 
 	        </header>
 

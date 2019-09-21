@@ -20,38 +20,8 @@ class AdminVue {
 	 * @access public
 	 * @return void
 	 */
-<<<<<<< HEAD
-	public function afficheHead() {
-		?>
-		<!DOCTYPE html>
-		<html lang="fr">
-		
-		<head>
-		    <title>L'art public à Montréal - admin</title>
-		    <meta charset="utf-8">
-		    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		    <meta name="description" content="">
-
-
-		    <meta name="viewport" content="width=device-width">
-
-
-		    <meta name="viewport" content="width=device-width">		    
-		    <link rel="stylesheet" href="../../css/flex.css" type="text/css" media="screen">
-		    <link rel="stylesheet" href="../../css/adminmain.css" type="text/css" media="screen">			
-			<link rel="stylesheet" href="../../css/text.css" type="text/css" media="screen">
-			<link rel="stylesheet" href="../../css/var.css" type="text/css" media="screen">
-		    <meta name="viewport" content="width=device-width">
-
-		    
-		    <script src="../../js/define.js"></script>
-		    <script src="../../js/admin.js"></script>
-		</head>
-		<?php
-=======
 	public function afficheEntete() {
         require("entetepied/enteteAdmin.html.php");
->>>>>>> 15beada29c09abb0e7e00d97a84ba47474c0ddf6
 		
 	}
 
@@ -91,7 +61,6 @@ require("admin/AfficheOeuvres.html.php");
 	 */
 	public function afficheOeuvre($aData = Array()) {
 		
-<<<<<<< HEAD
 		?>
 		 <section class="contenu listeOeuvres">
          	<section class="recherche"></section>
@@ -122,9 +91,6 @@ require("admin/AfficheOeuvres.html.php");
 			</section>
 			
 		<?php
-=======
-		require("admin/AfficheOeuvre.html.php");
->>>>>>> 15beada29c09abb0e7e00d97a84ba47474c0ddf6
 		
 	}
 
