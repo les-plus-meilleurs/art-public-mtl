@@ -56,7 +56,7 @@ if($_SERVER['REQUEST_METHOD'] == 'OPTIONS')
 
    
 	$oReq = new Requete();
-	var_dump($oReq);
+	//var_dump($oReq);
 	/* Instanciation du controlleur */
 
 /*

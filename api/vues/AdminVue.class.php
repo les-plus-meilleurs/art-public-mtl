@@ -24,6 +24,10 @@ class AdminVue {
         require("entetepied/enteteAdmin.html.php");
 		
 	}
+	public function afficheEnteteConnexion() {
+        require("entetepied/enteteAdminConnexion.html.php");
+		
+	}
 
 	/**
 	 * Affiche entetes

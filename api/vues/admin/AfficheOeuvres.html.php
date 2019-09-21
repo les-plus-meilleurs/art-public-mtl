@@ -5,7 +5,7 @@
 						<?php
 						foreach ($aData as $cle => $oeuvre) {
 							extract($oeuvre);
-                           
+                           //echo"test";
 							?>
 							<section class="oeuvre flex flex-row">
 			                    <span class="titre"><?php echo $Titre ?> - </span>
