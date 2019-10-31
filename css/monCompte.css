@@ -38,9 +38,13 @@
 .mesDonnes div a{
     color: var(--couleur-marine);
 }
+/*-------------- MON COMPTE ------------*/
 
 
-/*-------------- CONNEXION ------------*/
+
+
+
+/*-------------- CONNEXION/ INSCRIPTION ------------*/
 main{
     display:flex;
     flex-direction: column;

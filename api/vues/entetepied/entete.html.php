@@ -144,7 +144,6 @@
 		<a class="logo" href="/art-public-mtl/api/"><img src="<?php if($page == "artiste" || $page == "oeuvre" || $page == "inscription" || $page =="connexion"){echo "../";}?>../img/icons/logoAP.png" alt="Logo Art public Montréal"></a>
 		
 		<nav class="menu">
-			
 			<a class="lien" href="/art-public-mtl/api/oeuvre">
 			<i class="material-icons">photo</i>
 				<p>Oeuvres</p>
@@ -171,10 +170,7 @@
 			</a>
 		</nav>	
 		<div class="icons">
-			<a class="search" href="#">
-				<i class="material-icons">search</i>
-			</a>
-			<a class="langue hidden" href="#">EN</a>
+			<a class="langue" href="#">EN</a>
 			<a class="menuCubes" href="#">
 				<img src="<?php if($page == "artiste" || $page == "oeuvre" || $page == "inscription"){echo "../";}?>../img/icons/menu.svg" alt="Icone d'ouverture du menu">
 				</a>
