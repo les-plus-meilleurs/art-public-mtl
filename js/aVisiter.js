@@ -7,15 +7,18 @@ window.addEventListener("load", function(){
        // console.log(aVisiter.dataset.vis);
         if(aVisiter.dataset.vis !=""){
             aVisiter.innerHTML = "star";
+            aVisiter.classList.add("focus");
         }
         aVisiter.addEventListener("click", function(evt){
             let icone =evt.target;
             if(icone.innerHTML == "star_border"){
                 icone.innerHTML = "star";
+                icone.classList.add("focus");
                 //console.log(icone.dataset.id);
                 //console.log(id);
             }else if(icone.innerHTML == "star"){
                 icone.innerHTML = "star_border";
+                icone.classList.remove("focus");
             }
             let id=icone.dataset.id;
             ajax(id);

@@ -60,7 +60,8 @@ class CompteControlleur extends Controlleur
     
 	public function postAction(Requete $requete)
     {       
-        
+
+
         if(!empty($_POST))
         {
             // si l'action envoyée est connexion
@@ -88,20 +89,20 @@ class CompteControlleur extends Controlleur
                     exit();
                 }
             }
-            
             if(isset($requete->url_elements[1]) && $requete->url_elements[1]=="inscriptionForm")
             { 
+                
                 $mail = $this->verificationMail($_POST['mail']);
                 $login = $this->verificationLogin($_POST['login']);
                 if($mail==true && $login== true){
                          header("location:/art-public-mtl/api/compte/inscription?update=loginmail"); //redirige vers l'accueil (login)
                          exit(); 
                 }
-                elseif ($login== true){
+                else if ($login== true){
                     header("location:/art-public-mtl/api/compte/inscription?update=login"); //redirige vers l'accueil (login)
                     exit(); 
                 }
-                elseif ($mail== true){
+                else if ($mail== true){
                     header("location:/art-public-mtl/api/compte/inscription?update=mail"); //redirige vers l'accueil (login)
                     exit(); 
                 }

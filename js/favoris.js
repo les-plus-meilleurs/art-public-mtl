@@ -7,15 +7,18 @@ window.addEventListener("load", function(){
         //console.log(favori.dataset.fav);
         if(favori.dataset.fav !=""){
             favori.innerHTML = "favorite";
+            favori.classList.add("focus");
         }
         favori.addEventListener("click", function(evt){
             let icone =evt.target;
             if(icone.innerHTML == "favorite_border"){
                 icone.innerHTML = "favorite";
+                icone.classList.add("focus");
                 //console.log(icone.dataset.id);
                 //console.log(id);
             }else if(icone.innerHTML == "favorite"){
                 icone.innerHTML = "favorite_border";
+                icone.classList.remove("focus");
             }
             let id=icone.dataset.id;
             ajax(id);

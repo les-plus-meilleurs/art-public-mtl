@@ -6,10 +6,10 @@
         <div class="infosPersos">
           <p><?php 
               if(isset($_GET['update']) && $_GET['update']=="error"){
-                echo "Une erreur est survenue, veuillez vérifiez vos champs.";  
+                echo "<p class='msg'>Une erreur est survenue, veuillez vérifiez vos champs.</p>";  
               }  
               else if (isset($_GET['update']) && $_GET['update']=="ok"){
-                echo "Votre mot de passe a été modifié.";  
+                echo "<p class='msg'>Votre mot de passe a été modifié.</p>";  
               } ?></p>
            <h2>INFORMATIONS PERSONNELLES</h2>
            <section class="infoPerso">
@@ -49,7 +49,7 @@
                 </div>
                 <div id=btns_form class="btns_form">
                     <input class="btn annuler" type="button" id="annuler" value="Annuler">
-                    <input class="btn" type="submit" id="modifier" value="Modifier">
+                    <input class="btn" type="button" id="modifier" value="Modifier">
                 </div>
             </div>
         </form>

@@ -1,11 +1,11 @@
     <section class="inscrip">
         <h2>Inscription</h2>
-        <form id='inscription' action="" method="post">
+        <form id='inscription' action="/art-public-mtl/api/compte/inscriptionForm" method="post">
             <div>
                 <label for="mail">
                     <p class="pConnexion titreBtn">Adresse mail</p>
                 </label>
-                <input class="inputText" type="text" id="mail" name="mail" value="" placeholder='Entrez votre adresse mail'>
+                <input class="inputText" type="email" id="mail" name="mail" value="" placeholder='Entrez votre adresse mail' required>
             </div>
             <div>
                 <label for="name">
@@ -22,8 +22,10 @@
             <div>
                 <label for="mdpConfirm">
                     <p class="pConnexion titreBtn">Confirmez le mot de passe</p>
+                    <p id="msgErreurRegex"></p>
                 </label>
                 <input class="inputText" type="password" id="mdpConfirm" name="mdpConfirm" value="">
+                <p id="msgErreurConfirm"></p>
             </div>
             <div>
                 <input class="btnConnexion btnLarge" type="button" id="envoyer" value="Connexion">

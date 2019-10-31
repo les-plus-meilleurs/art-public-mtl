@@ -1,0 +1,14 @@
+.compte{
+    display:flex;
+    justify-content: flex-end;
+}
+.compte i, .compteText i{
+    color:var(--couleur-marine);
+    padding:5px;
+}
+.compte i.focus{
+    color:var(--couleur-orange);
+}
+.compteText{
+
+}

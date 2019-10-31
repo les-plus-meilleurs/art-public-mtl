@@ -26,7 +26,5 @@
             <a href="/art-public-mtl/api/compte/inscription" class="txtLien">S'inscrire <i class="material-icons">chevron_right</i></a>
         </div>
     </div>
-        
-        
     </section>
 </main>

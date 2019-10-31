@@ -39,6 +39,7 @@
 			echo '<link rel="stylesheet" href="../css/oeuvres.css" type="text/css" media="screen">';
 			echo '<link rel="stylesheet" href="../css/liste.css" type="text/css" media="screen">';
 			echo '<link rel="stylesheet" href="../css/sliderDate.css" type="text/css" media="screen">';
+			echo '<link rel="stylesheet" href="../css/favoris.css" type="text/css" media="screen">';
 			jsBase("oeuvres");
 			echo '<script src="../js/imgOeuvre.js"></script>';
 			echo '<script src="../js/filtres.js"></script>';
@@ -90,7 +91,7 @@
 			echo '<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">';
 			echo '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">';
 			echo '<link rel="stylesheet" href="../css/monCompte.css">';
-			//echo '<script src="../js/validationForm.js"></script>';
+			// echo '<script src="../js/validationForm.js"></script>';
 			jsBase("compte");
 		} 
         else if ($page== "inscription" || $page =="connexion"){
@@ -99,7 +100,7 @@
 			echo '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">';
 			// echo '<link rel="stylesheet" href="../css/inscription.css">';
 			echo '<link rel="stylesheet" href="../../css/monCompte.css">';
-			//echo '<script src="../../js/validationFormIns.js"></script>';
+			echo '<script src="../../js/validationFormIns.js"></script>';
 			jsBase("inscription");
 		} 
 		
