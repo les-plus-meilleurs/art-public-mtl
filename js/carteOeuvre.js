@@ -167,7 +167,7 @@ var map;
             
             
             //options default la carte Google
-            var oeuvre = ["<?php echo $description; ?>", <?php echo $coordonneeLatitude; ?>, <?php echo $coordonneeLongitude; ?>, "<?php echo $nom; ?>"];
+            var oeuvre = ["<?php echo $description; ?>", "<?php echo $coordonneeLatitude; ?>", "<?php echo $coordonneeLongitude; ?>", "<?php echo $nom; ?>"];
             var options = {
                 center: {lat: oeuvre[1], lng: oeuvre[2]},
                 zoom: 17,
@@ -194,7 +194,7 @@ var map;
 
     function setMarkers(map) 
     {
-        var oeuvre = ["<?php echo $titre; ?>", <?php echo $coordonneeLatitude; ?>, <?php echo $coordonneeLongitude; ?>, "<?php echo $nom; ?>"];
+        var oeuvre = ["<?php echo $titre; ?>", "<?php echo $coordonneeLatitude; ?>", "<?php echo $coordonneeLongitude; ?>", "<?php echo $nom; ?>"];
 
         //marqueur pour chaque oeuvre
         var icon = {

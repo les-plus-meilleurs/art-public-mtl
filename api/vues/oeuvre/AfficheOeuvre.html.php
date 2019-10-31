@@ -19,7 +19,13 @@
 //        die;
 
 
-		?>
+    if(isset($_SESSION["user"]) && $_SESSION['user']=='ok'){
+							?>
+							<section class="compte uneOeuvre">
+								<i class="material-icons aVisiter photo" data-vis="<?php echo $aVisiter ?>" data-id="<?php echo $id_oeuvre ?>">star_border</i>
+								<i class="material-icons favori photo" data-id="<?php echo $id_oeuvre ?>" data-fav="<?php echo $favoris ?>" >favorite_border</i>
+							</section>
+							<?php } ?>
 		<h1 class="uneOeuvre_titre"><?php echo $titre?></h1>
 		<p><?php echo $description; ?></p>
 		<header class="image dummy">

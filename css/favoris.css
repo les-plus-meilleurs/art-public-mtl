@@ -16,4 +16,9 @@ i.material-icons.text{
     color:var(--couleur-orange);
 }
 
+.compte.uneOeuvre{
+    width:100%;
+    box-sizing: border-box;
+    padding-right:var(--padding-base);
+}
 

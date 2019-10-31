@@ -34,7 +34,7 @@ window.addEventListener("load", function(){
             for(let i=0; i<iconesAVisiter.length; i++){
                 if(id== iconesAVisiter[i].dataset.id){
                     if(!iconesAVisiter[i].classList.contains(typeIconeTest)){
-                        console.log(iconesAVisiter[i]);
+                        //console.log(iconesAVisiter[i]);
                         if(iconesAVisiter[i].innerHTML == "star_border"){
                             iconesAVisiter[i].innerHTML = "star";
                             iconesAVisiter[i].classList.add("focus");

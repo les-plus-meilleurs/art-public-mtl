@@ -57,11 +57,13 @@
 		} 
 		else if ($page== "oeuvre"){
 			cssBase("oeuvre");
+			echo '<link rel="stylesheet" href="../../css/favoris.css" type="text/css" media="screen">';
 			echo '<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">';
 			echo '<link rel="stylesheet" href="../../css/oeuvres.css" type="text/css" media="screen">';
 			echo '<script src="../../js/onglets.js"></script>';
 			echo '<script src="../../js/imgOeuvre.js"></script>';
 			echo '<script src="../../js/carteOeuvre.js"></script>';
+			echo '<script src="../../js/favorisUneOeuvre.js"></script>';
 			jsBase("oeuvre");
 		} 
 		else if ($page== "apropos"){

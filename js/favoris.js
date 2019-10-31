@@ -10,7 +10,7 @@ window.addEventListener("load", function(){
         }
         favori.addEventListener("click", function(evt){
             let icone =evt.target;
-            let typeicone=icone.classList;
+           // let typeicone=icone.classList;
             let typeIconeTest;
             if(icone.classList.contains("text")){
                 typeIconeTest="text";
@@ -33,7 +33,7 @@ window.addEventListener("load", function(){
             for(let i=0; i<iconesFavoris.length; i++){
                 if(id== iconesFavoris[i].dataset.id){
                     if(!iconesFavoris[i].classList.contains(typeIconeTest)){
-                        console.log(iconesFavoris[i]);
+                       // console.log(iconesFavoris[i]);
                         if(iconesFavoris[i].innerHTML == "favorite_border"){
                             iconesFavoris[i].innerHTML = "favorite";
                             iconesFavoris[i].classList.add("focus");
