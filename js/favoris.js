@@ -1,8 +1,7 @@
 /*gérer affichage des favoris etc.*/ 
-
 window.addEventListener("load", function(){
     let iconesFavoris =document.querySelectorAll(".favori");
-    //console.log(iconesFavoris);
+   // console.log(iconesFavoris);
     iconesFavoris.forEach(function(favori){
         //console.log(favori.dataset.fav);
         if(favori.dataset.fav !=""){
@@ -11,17 +10,42 @@ window.addEventListener("load", function(){
         }
         favori.addEventListener("click", function(evt){
             let icone =evt.target;
+            let typeicone=icone.classList;
+            let typeIconeTest;
+            if(icone.classList.contains("text")){
+                typeIconeTest="text";
+            }else{
+                typeIconeTest="photo";
+            }
+
             if(icone.innerHTML == "favorite_border"){
                 icone.innerHTML = "favorite";
                 icone.classList.add("focus");
-                //console.log(icone.dataset.id);
-                //console.log(id);
+
             }else if(icone.innerHTML == "favorite"){
                 icone.innerHTML = "favorite_border";
                 icone.classList.remove("focus");
             }
             let id=icone.dataset.id;
             ajax(id);
+
+            //Changer l'icone sur l'autre liste (texte ou photo)
+            for(let i=0; i<iconesFavoris.length; i++){
+                if(id== iconesFavoris[i].dataset.id){
+                    if(!iconesFavoris[i].classList.contains(typeIconeTest)){
+                        console.log(iconesFavoris[i]);
+                        if(iconesFavoris[i].innerHTML == "favorite_border"){
+                            iconesFavoris[i].innerHTML = "favorite";
+                            iconesFavoris[i].classList.add("focus");
+            
+                        }else if(iconesFavoris[i].innerHTML == "favorite"){
+                            iconesFavoris[i].innerHTML = "favorite_border";
+                            iconesFavoris[i].classList.remove("focus");
+                        }
+                    }
+                }
+            }
+
         });
     });
 
@@ -47,5 +71,6 @@ window.addEventListener("load", function(){
         //envoyer l'id et le username
         xhr.send();
     }
+
 
 })
