@@ -4,11 +4,16 @@
 }
 .compte i, .compteText i{
     color:var(--couleur-marine);
+}
+.compte i{
     padding:5px;
 }
-.compte i.focus{
+i.material-icons.text{
+    font-size:2.8rem;
+    padding-right:var(--padding-base);
+}
+.compte i.focus, .compteText i.focus{
     color:var(--couleur-orange);
 }
-.compteText{
 
-}
+

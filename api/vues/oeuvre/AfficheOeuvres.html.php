@@ -167,8 +167,13 @@ $listeLettres = array(0=>array("lettre"=>"A","ok"=>false),
 				
 					}			
 			?>
-			<section class="oeuvre" data-id="<?php echo $id_oeuvre ?>">
+			<section class="oeuvre oeuvreText" data-id="<?php echo $id_oeuvre ?>">
+				<section class="compteText">
+						<i class="material-icons aVisiter text" data-vis="<?php echo $aVisiter ?>" data-id="<?php echo $id_oeuvre ?>">star_border</i>
+						<i class="material-icons favori text" data-fav="<?php echo $favoris ?>"  data-id="<?php echo $id_oeuvre ?>">favorite_border</i>
+				</section>
 				<a class="lienOeuvre lienArtisteA" href="oeuvre/<?php echo $id_oeuvre; ?>"><?php  echo $Titre;?></a>
+				
 					<?php 
 					
 					$j=count($Artistes);
@@ -177,6 +182,7 @@ $listeLettres = array(0=>array("lettre"=>"A","ok"=>false),
 						$j=$j-1;
 						extract($artiste);
 						?>
+						
 						<a class="lienArtiste" href="artiste/<?php echo $id_artiste; ?>">
 						<?php 
 						if(isset($Nom) && $Nom!=""){
@@ -190,15 +196,14 @@ $listeLettres = array(0=>array("lettre"=>"A","ok"=>false),
 							echo ", ";
 						}
 						?></a>
+						
+						
 					<?php			
 					}
 
 					if(isset($_SESSION["user"]) && $_SESSION['user']=='ok'){
 					?>
-						<section class="compteText">
-							<i class="material-icons aVisiter" data-vis="<?php echo $aVisiter ?>" data-id="<?php echo $id_oeuvre ?>">star_border</i>
-							<i class="material-icons favori" data-fav="<?php echo $favoris ?>"  data-id="<?php echo $id_oeuvre ?>">favorite_border</i>
-						</section>
+						
 					<?php
 					}
 					?>
