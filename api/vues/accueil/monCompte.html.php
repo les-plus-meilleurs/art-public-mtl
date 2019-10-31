@@ -13,7 +13,7 @@
               } ?></p>
            <h2>INFORMATIONS PERSONNELLES</h2>
            <section class="infoPerso">
-               <div class="elmt">
+               <div class="elmt first">
                     <p class="txtBtn">Nom d'utilisateur :</p>
                     <p> <?php echo $_SESSION["username"]; ?></p>
                </div>

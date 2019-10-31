@@ -78,6 +78,11 @@ label.txtBtn{
     justify-content: center;
 }
 
+.elmt.first{
+    border-bottom: 2px solid var(--couleur-orange);
+    padding-bottom: var(--padding-base);
+}
+
 /* BREAK TABLET PORTRAIT UP */
 @media screen and (min-width: 700px) {
     .teste{
@@ -90,6 +95,10 @@ label.txtBtn{
    .elmt p{
        padding-right: var(--padding-base);
    }
+   .elmt.first{
+    border-bottom: none;
+}
+
 }
 @media screen and (min-width: 1200px) {
     .teste{
