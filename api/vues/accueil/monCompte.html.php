@@ -17,11 +17,14 @@
                     <p class="txtBtn">Nom d'utilisateur :</p>
                     <p> <?php echo $_SESSION["username"]; ?></p>
                </div>
-              <div class="elmt">
-                <p class="txtBtn">Mot de passe :</p>
+              <div>
+                  <div class="elmt">
+                  <p class="txtBtn">Mot de passe :</p>
                 <p> <?php 
-                echo '*********'; 
+                 echo '*********'; 
                 ?></p>
+                  </div>
+
                 <a href="#" id='test' class="txtLien">Modifier mon mot de passe ></a>
               </div>
 
@@ -54,7 +57,7 @@
     <div class="mesDonnes">
       <div class="autresInfos">
         <h2>AUTRES INFOS</h2>
-        <section class="infoPerso">
+        <section class="infoPerso elmt">
             <p class="txtBtn">Adresse mail : </p>
             <p><?php echo $courriel; ?></p>
         </section>
