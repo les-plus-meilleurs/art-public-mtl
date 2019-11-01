@@ -3,6 +3,12 @@ window.addEventListener("load", function(){
     let menu = document.querySelector(".menu");
     let iconeMenu=document.querySelector(".menuCubes");
     let iconeFermer=document.querySelector(".fermerMenu");
+    let langue=document.querySelector(".langue");
+    let recherche=document.querySelector(".search");
+    
+    langue.addEventListener("click", function(){
+        console.log(langue.innerHTML);
+    })
 
     iconeMenu.addEventListener("click", function(){
         appbar.classList.add("montre");

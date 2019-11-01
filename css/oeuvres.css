@@ -1,4 +1,20 @@
-/*------------------ Choix affichage liste -------------------*/
+.bulle{
+    color:#103C61; 
+    font-size:30px; 
+    font-family: Open Sans; 
+    font-style: normal; 
+    font-weight: bold; 
+    font-size: 18px; 
+    line-height: 25px; 
+    display: flex; 
+    align-items: center; 
+    text-transform: uppercase;       
+}
+.bulle2{
+    color:#DF8E32; 
+    text-decoration:none;
+}
+    /*------------------ Choix affichage liste -------------------*/
 .recherche{
     width:100%;
     display:flex;
@@ -58,11 +74,16 @@ body{
 }
 .filtre i{
     font-size:3.6rem;
-    padding: 5px;
+    padding: 10px;
 }
 .filtre i{
     background-color: var(--couleur-marine);
     color:white;
+    border-radius:25px;
+}
+.filtre svg{
+    padding: 12px;
+    background-color: var(--couleur-marine);
     border-radius:25px;
 }
 
@@ -78,7 +99,7 @@ body{
     background-color: var(--couleur-marine);
     color:var(--couleur-fond);
     margin-bottom: var(--padding-base);
-    position:sticky;
+    position:absolute;
     top:0;
     width:100%;
     min-height:100vh;
@@ -155,7 +176,7 @@ body{
     transform:scaleY(1);
 }
 /* .filtres.selec{
-    /* transform: ScaleY(1); */
+    transform: ScaleY(1);
     transform-origin: 50% 0%;
     transition: transform 235ms;
     transform:translateY(0%);
@@ -166,6 +187,7 @@ body{
     transform-origin: 50% 0%;
     transition: transform .15s;
     transform:translateY(40vh);
+    z-index:-1;
 }
 .filtre.selec{
     /* transform: ScaleY(1); */

@@ -1,5 +1,13 @@
 		
-		<section class="nvlOeuvres">
+	<?php error_reporting(E_ALL ^ E_WARNING);  ?>
+    <?php
+        $document = cookie();
+        $text1 = $document->getElementById("vivez1")->nodeValue;
+        $text2 = $document->getElementById("vivez2")->nodeValue;
+        $text3 = $document->getElementById("vivez3")->nodeValue;
+    ?>	
+
+    <section class="nvlOeuvres">
 			<!-- <h2>Nouvelles oeuvres</h2> -->
 			<!--SLIDER -->
 			<!-- ref : https://www.w3schools.com/howto/howto_js_slideshow.asp -->
@@ -12,22 +20,22 @@
 			<!-- Slideshow container -->
 			<div class="slider">
 				<div class="slide fade">
-					<a href="">
+					<a href="oeuvre/4">
 						<div class="img"><img class="photo" src="../img/oeuvres/1127_1.jpg" alt=""></div>
-						<div class="nom">Nom de l'oeuvre</div>
+						<div class="nom">Le malheureux magnifique</div>
 					</a>
 					
 				</div>
 				<div class="slide fade">
-					<a href="">
+					<a href="oeuvre/2">
 						<div class="img"><img class="photo" src="../img/oeuvres/1099_1_B.jpg" alt=""></div>
-						<div class="nom">Nom de l'oeuvre</div>
+						<div class="nom">Porte de jour</div>
 					</a>
 				</div>
 				<div class="slide fade">
-					<a href="">
+					<a href="oeuvre/3">
 						<div class="img"><img class="photo" src="../img/oeuvres/1119_1.jpg" alt=""></div>
-						<div class="nom">Nom de l'oeuvre</div>
+						<div class="nom">Regarder les pommetiers</div>
 					</a>
 				</div>
 
@@ -47,8 +55,10 @@
 		</section>
 		<section class="carte">
 			<div class="text">
-				<h1>Vivez Montréal</h1>
-				<p>À travers sa grande collection d'art public</p>
+<!--				<h1>Vivez Montréal</h1>-->
+				<h1><?php echo $text1 ?></h1>
+<!--				<p>À travers sa grande collection d'art public</p>-->
+				<p><?php echo $text2 ?></p>
 			</div>
-			<a class= "btn btnAccueil" href="/art-public-mtl/api/oeuvre">Voir la carte</a>
+			<a class= "btn btnAccueil" href="/art-public-mtl/api/oeuvre"><?php echo $text3 ?></a>
 		</section>

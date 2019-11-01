@@ -1,3 +1,7 @@
+<?php error_reporting(E_ALL ^ E_WARNING);  ?>
+<?php
+    $document = cookie();
+?>
 
 <section class="recherche">
 	<div><i class="vueListe material-icons">list</i></div>
@@ -200,7 +204,6 @@ $listeLettres = array(0=>array("lettre"=>"A","ok"=>false),
 						
 					<?php			
 					}
-
 					if(isset($_SESSION["user"]) && $_SESSION['user']=='ok'){
 					?>
 						
@@ -296,5 +299,7 @@ $listeLettres = array(0=>array("lettre"=>"A","ok"=>false),
 				
 			</section>
 			<article class="filtre selec">
-				<i class="material-icons">filter_list</i>
+				<!-- <i class="material-icons">filter_list</i> -->
+				<svg class="svg-icon_filter" width="29" height="31" viewBox="0 0 32 33" xmlns="http://www.w3.org/2000/svg"><g stroke="white" stroke-width="3"><path d="M32 6.5H0M32 16.5H0M32 26.5H0"></path><circle fill="var(--couleur-marine)" cx="22" cy="6.5" r="5"></circle><circle fill="var(--couleur-marine)" cx="10" cy="26.5" r="5"></circle></g></svg>
+				<!-- <span>Filtres</span> -->
 			</article>

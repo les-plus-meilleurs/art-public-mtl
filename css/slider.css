@@ -23,7 +23,7 @@
     flex-direction: column;
   }
     .slide a .img {
-        height: 270px;
+        /* height: 270px; */
         margin-bottom:5px;
         position:relative;
     }
@@ -141,7 +141,7 @@
     } */
     /*Agrandir height sections*/
     .slide a .img {
-        height: 540px;
+        /* height: 540px; */
     }
     .prev, .next {
       top: 270px;

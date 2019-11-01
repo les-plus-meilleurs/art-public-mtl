@@ -1,3 +1,7 @@
+<?php error_reporting(E_ALL ^ E_WARNING);  ?>
+<?php
+    $document = cookie();
+?>
 <?php
 /**
  * Class Vue
@@ -111,8 +115,7 @@ class Vue {
 	 */
 	public function afficheAPropos() {
 		
-		require("apropos/apropos.html.php");
-		
+		require("apropos/apropos.html.php");		
 	}
 
 	/**
@@ -154,5 +157,6 @@ class Vue {
 		require("accueil/monCompte.html.php");
 		
 	}
+	
 }
 ?>
