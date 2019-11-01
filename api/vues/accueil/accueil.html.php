@@ -1,19 +1,10 @@
 		
-<<<<<<< HEAD
 	<?php //error_reporting(E_ALL ^ E_WARNING);  ?>
     <?php
         /*$document = cookie();
         $text1 = $document->getElementById("vivez1")->nodeValue;
         $text2 = $document->getElementById("vivez2")->nodeValue;
         $text3 = $document->getElementById("vivez3")->nodeValue;*/
-=======
-	<?php error_reporting(E_ALL ^ E_WARNING);  ?>
-    <?php
-        $document = cookie();
-        $text1 = $document->getElementById("vivez1")->nodeValue;
-        $text2 = $document->getElementById("vivez2")->nodeValue;
-        $text3 = $document->getElementById("vivez3")->nodeValue;
->>>>>>> d09b13fb623773256117e64277d11a109e916943
     ?>	
 
     <section class="nvlOeuvres">
@@ -64,7 +55,6 @@
 		</section>
 		<section class="carte">
 			<div class="text">
-<<<<<<< HEAD
 				<h1>Vivez Montréal</h1>
 				<!-- <h1><?php echo $text1 ?></h1> -->
 				<p>À travers sa grande collection d'art public</p>
@@ -72,12 +62,4 @@
 			</div>
 			<!-- <a class= "btn btnAccueil" href="/art-public-mtl/api/oeuvre"><?php echo $text3 ?></a> -->
 			<a class= "btn btnAccueil" href="/art-public-mtl/api/carte">Voir la carte</a>
-=======
-<!--				<h1>Vivez Montréal</h1>-->
-				<h1><?php echo $text1 ?></h1>
-<!--				<p>À travers sa grande collection d'art public</p>-->
-				<p><?php echo $text2 ?></p>
-			</div>
-			<a class= "btn btnAccueil" href="/art-public-mtl/api/oeuvre"><?php echo $text3 ?></a>
->>>>>>> d09b13fb623773256117e64277d11a109e916943
 		</section>

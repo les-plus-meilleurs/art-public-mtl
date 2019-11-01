@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 ﻿<?php error_reporting(E_ALL ^ E_WARNING);  ?>
 <?php
     /*$document = cookie();
-=======
-<?php error_reporting(E_ALL ^ E_WARNING);  ?>
-<?php 
-    $document = cookie();
->>>>>>> d09b13fb623773256117e64277d11a109e916943
     $text_localisation = $document->getElementById("localisation")->nodeValue;
     $text_adresse1 = $document->getElementById("adresse1")->nodeValue;
     $text_adresse2 = $document->getElementById("adresse2")->nodeValue;
@@ -23,11 +17,7 @@
     $text_e_suj4 = $document->getElementById("e_suj4")->nodeValue;
     $text_e_commentaire = $document->getElementById("e_commentaire")->nodeValue;
     $text_e_envoyer = $document->getElementById("e_envoyer")->nodeValue;
-<<<<<<< HEAD
     $text_e_medias = $document->getElementById("medias")->nodeValue;*/
-=======
-    $text_e_medias = $document->getElementById("medias")->nodeValue;
->>>>>>> d09b13fb623773256117e64277d11a109e916943
 ?>
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8S4xg4xxyN0iGGBdUOpR3xRa4DIkD710&callback=initMap"
@@ -38,11 +28,7 @@
     //data oeuvres
     function setMarkers(map)
     {
-<<<<<<< HEAD
         var oeuvre = ["Campus principal", 45.551088, -73.5557277, ""];
-=======
-        var oeuvre = ["<?php echo $text_adresse1; ?>", 45.551088, -73.5557277, ""];
->>>>>>> d09b13fb623773256117e64277d11a109e916943
         //marqueur pour chaque oeuvre
         var icon = {
             url: "../img/icons/mapmarker.png", // url
@@ -246,11 +232,7 @@
                 ],
                 {name: 'Styled Map'});
             //options default la carte Google
-<<<<<<< HEAD
             var oeuvre = ["Campus principal", 45.551088, -73.5557277, ""];
-=======
-            var oeuvre = ["<?php echo $text_adresse1; ?>", 45.551088, -73.5557277, ""];
->>>>>>> d09b13fb623773256117e64277d11a109e916943
             var options = {
                 center: {lat: oeuvre[1], lng: oeuvre[2]},
                 zoom: 17,
@@ -271,48 +253,37 @@
         }
     </script>
 <section class="contenu-contact">
+
     <?php if($message!=null) {
         echo($message);
     }
     ?>
     <div class="systeme_onglets">
         <div class="onglets">
-<<<<<<< HEAD
             <span class="onglet_0 onglet" id="onglet_localisation" onclick="javascript:change_onglet('localisation');">Localisation</span>
             <span class="onglet_0 onglet" id="onglet_ecrivez" onclick="javascript:change_onglet('ecrivez');">&Eacute;crivez-nous</span>
 <!--            <span class="onglet_0 onglet" id="onglet_medias" onclick="javascript:change_onglet('medias');"><?php //echo $text_e_medias; ?></span>-->
-=======
-            <span class="onglet_0 onglet" id="onglet_details" onclick="javascript:change_onglet('details');"><?php echo $text_localisation; ?></span>
-            <span class="onglet_0 onglet" id="onglet_artiste" onclick="javascript:change_onglet('artiste');"><?php echo $text_ecrivez; ?></span>
-            <span class="onglet_0 onglet" id="onglet_carte" onclick="javascript:change_onglet('carte');"><?php echo $text_e_medias; ?></span>
->>>>>>> d09b13fb623773256117e64277d11a109e916943
         </div>
         <div class="contenu_onglets">
             <div class="contenu_onglet" id="contenu_onglet_localisation">
                 <section class="texte">
                     <p>
-                    <strong><?php echo $text_adresse1; ?></strong>
+                    <strong>Campus principal</strong>
                     <br>
-                    <?php echo $text_adresse2; ?>
+                    3800, rue Sherbrooke Est
                     <br>
-                    <?php echo $text_adresse3; ?>
+                    Montr&eacute;al (Qu&eacute;bec) H1X 2A2
                     <br>
-                    <?php echo $text_adresse4; ?>
+                    T&eacute;l.: 514 254-7131
                     </p>
                     <div class="carte_contact">
-<<<<<<< HEAD
                     <div id="map" class="carte"></div>
-=======
-                    <div id="map" class="carte" style="height:480px; width:640px;"></div>
-<!--                    <iframe src="https://www.google.com/maps/d/embed?mid=1nrpE60oVxUEQEUOvHFRT5c-33P5zf6Ix" width="640" height="480"></iframe>-->
->>>>>>> d09b13fb623773256117e64277d11a109e916943
                     </div>
                 </section>
             </div>
             <div class="contenu_onglet" id="contenu_onglet_ecrivez">
                 <form action="/art-public-mtl/api/contact" method="post">
                     <fieldset>
-<<<<<<< HEAD
                         <div>
                           <label for="nom">
                             <p class="pContact titreBtn">Nom</p>
@@ -351,31 +322,6 @@
                         <div>
                           <input class="btnContact btnLarge" type="submit" value="Envoyer">
                         </div>
-=======
-                        <h3><?php echo $text_ecrivez; ?></h3>
-                        <?php echo $text_e_nom; ?><br>
-                        <input type="text" name="nom" value="">
-                        <br>
-                        <?php echo $text_e_prenom; ?><br>
-                        <input type="text" name="prenom" value="">
-                        <br>
-                        <?php echo $text_e_courriel; ?><br>
-                        <input type="text" name="courriel" value="">
-                        <br>
-                        <?php echo $text_e_sujet; ?>
-                        <select name="sujet">
-                            <option value="Proposition"><?php echo $text_e_suj1; ?></option>
-                            <option value="Demande"><?php echo $text_e_suj2; ?></option>
-                            <option value="Signaler"><?php echo $text_e_suj3; ?></option>
-                            <option value="Autre"><?php echo $text_e_suj4; ?></option>
-                        </select>
-                        <br>
-                        <p><?php echo $text_e_commentaire; ?></p>
-                        <br>
-                        <textarea name="message" rows="10" cols="30"></textarea>
-                        <br><br>
-                        <input type="submit" value="<?php echo $text_e_envoyer; ?>">
->>>>>>> d09b13fb623773256117e64277d11a109e916943
                     </fieldset>
                 </form>
             </div>

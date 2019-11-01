@@ -6,8 +6,210 @@
     background-color:var(--couleur-marine);
     width:140px;
     height:40px;
-    padding: var(--padding-base) 0;
+/*    padding: var(--padding-base) 0;*/
     border-radius: 5px;
+    border:none;
+}
+.btnLarge, .inputText{
+    box-sizing: border-box;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    width:250px;
+    height:40px;
+    /* padding: var(--padding-base) 0; */
+    border-radius: 5px;
+
+}
+.btnLarge{
+    border:none;
+    background-color:var(--couleur-marine);
 }
 
+.inputText{
+    background-color:white;
+    border:2px solid var(--couleur-marine);
+}
+.inputMsg{
+    background-color:white;
+    border:2px solid var(--couleur-marine);
+    width:250px;
+}
 
+input{
+    color: var(--couleur-marine);
+    padding-left:var(--padding-base);
+}
+
+/* BREAK TABLET PORTRAIT UP */
+@media screen and (min-width: 600px) {
+    .btn{
+        width:168px;
+        height:48px;
+    }
+}
+
+/*BREAK DESKTOP UP*/
+@media screen and (min-width: 1200px) {
+.btn{
+    width:200px;
+    height:60px;
+}
+
+}
+
+/*-------------------- Onglets --------------------*/
+
+.systeme_onglets {
+    margin: 25px 0px;
+    width: 100%;
+}
+.systeme_onglets > div {
+    margin: 0px 20px;
+}
+
+.onglets {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    /*padding-left: 15px;
+    background-color: var(--couleur-fond);*/
+    display: flex;
+
+}
+
+.contenu_onglet table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.contenu_onglet td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 2px solid var(--couleur-orange);
+    color: var(--couleur-marine);
+    font-size: 14px;
+}
+
+.contenu_onglet td:first-child {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 16px;
+    text-decoration: none;
+    color:var(--couleur-marine);
+    padding-left: 5px;
+}
+
+.contenu_onglet tr:last-child td {
+    border-bottom: 0px;
+}
+
+.contenu_onglet tr:hover {
+    background-color:#f5f5f5;
+}
+
+.contenu_onglet > .texte > p {
+    padding: 15px;
+}
+
+.onglet {
+    display:inline-block;
+    margin-left:0px;
+    margin-right:0px;
+    color: var(--couleur-marine);
+    padding: 4px 10px;
+    margin: 0px 1px 0px 0px;
+    cursor:pointer;
+    flex-grow: 1;
+}
+
+.onglet_0 {
+    background: var(--couleur-bleu);
+}
+
+.onglet_1 {
+    background: var(--couleur-fond);
+    padding-bottom:4px;
+    color: var(--couleur-orange);
+    font-size: 16px;
+}
+
+.contenu_onglet {
+    background-color: var(--couleur-fond);
+    /* border:1px solid black; */
+    margin-top:-1px;
+    padding:5px;
+    display:none;
+}
+
+ul {
+    margin-top:0px;
+    margin-bottom:0px;
+    margin-left:-10px
+}
+
+h1 {
+    margin:0px;
+    padding:0px;
+}
+
+/*-------------------- Accordeon --------------------*/
+
+.accordion {
+    background-color: #eee;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--couleur-marine);
+    border-bottom: 2px solid var(--couleur-orange);
+}
+
+.accordion:last-of-type {
+  border-bottom: 0;
+}
+
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+
+.panel p {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  padding: 5px 5px 10px 5px;
+}
+
+.panel strong {
+  font-size: 15px;
+  transition: 0.4s;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  color: var(--couleur-marine);
+  text-transform: uppercase;
+  padding-top: 5px;
+}
+
+.panel {
+    padding: 0 18px;
+    max-height: 0;
+    background-color: white;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}

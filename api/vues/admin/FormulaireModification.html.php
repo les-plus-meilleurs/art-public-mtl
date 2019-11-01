@@ -11,11 +11,7 @@ $info4= $data4;
 				<a id="menu_oeuvre" href="/art-public-mtl/api/admin/oeuvre"><img src="../../../../img/icons/imageBlanch.svg" alt="icon image"><p class="text_menu">Oeuvres</p></a>
 				<a id="menu_artistes" href="/art-public-mtl/api/admin/artiste"><img src="../../../../img/icons/paletteBlanch.svg" alt="icon image"><p class="text_menu">Artistes</p></a>
 				<a id="menu_utilisateurs" href="/art-public-mtl/api/admin/utilisateur"><img src="../../../../img/icons/personBlanch.svg" alt="icon image"><p class="text_menu">Utilisateurs</p></a>
-<<<<<<< HEAD
                 <a id="menu_contact" href="/art-public-mtl/api/admin/contact"><img src="../../../../img/icons/comment.png" alt="icon image"><p class="text_menu">Messagerie</p></a>
-=======
-                <a id="menu_contact" href="/art-public-mtl/api/admin/contact"><img src="../../../../img/icons/comment.png" alt="icon image"><p class="text_menu">Commentaires</p></a>
->>>>>>> d09b13fb623773256117e64277d11a109e916943
                 
 			</aside>
             <div id="formAdmin">

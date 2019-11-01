@@ -1,3 +1,4 @@
+  
 :root {
     --taille-appbar : 100px;
 }
@@ -5,23 +6,19 @@
 
 /*ANIMATIONS */
 
-   
-
-
     .appbar{
         background-color: var(--couleur-fond);
         height:var(--taille-appbar);
         box-sizing: border-box;
-        /* position: fixed; */
-        /* top: 0; */
         width: 100%;
         display:flex;
         justify-content: space-between;
         align-items:center;
         padding: var(--padding-base);
+        z-index:3;
+        position: sticky;
+        top: 0;
     }
-
-
     .appbar .logo img{
         max-width:130px;
         height:auto;
@@ -72,9 +69,20 @@
         width: 50%;
         min-height:33.3%;
     }
-    .appbar .menu .lien svg{
-        fill: var(--couleur-fond);
+
+    .appbar .menu .lien p{
+        color : var(--couleur-fond);
+        margin-top:calc(var(--padding-base) / 2);
     }
+    .appbar .menu .lien i{
+        color: var(--couleur-fond);
+        font-size:9.6rem;
+        /* width:100px;
+        height:100px; */
+    }
+  
+
+    /* VERSION BLEUE */
     .appbar .lien:nth-of-type(1){
         background-color: var(--couleur-marine);
     }
@@ -94,7 +102,45 @@
         background-color: var(--couleur-menu6);
     }
 
+    /*VERSION COLORÉE 1*/
+    /* .appbar .lien:nth-of-type(1){
+        background-color: var(--couleur-marine);
+    }
+    .appbar .lien:nth-of-type(2){
+        background-color: var(--couleur-menu2);
+    }
+    .appbar .lien:nth-of-type(3){
+        background-color: var(--couleur-orange);
+    }
+    .appbar .lien:nth-of-type(4){
+        background-color: var(--couleur-orange-menu);
+    }
+    .appbar .lien:nth-of-type(5){
+        background-color: var(--couleur-bleu2);
+    }
+    .appbar .lien:nth-of-type(6){
+        background-color: var(--couleur-bleu2-menu);
+    } */
 
+    /*VERSION COLORÉE 2*/
+    /* .appbar .lien:nth-of-type(1){
+        background-color: var(--couleur-marine);
+    }
+    .appbar .lien:nth-of-type(2){
+        background-color: var(--couleur-bleu2-menu);
+    }
+    .appbar .lien:nth-of-type(3){
+        background-color: var(--couleur-bleu2-menu);
+    }
+    .appbar .lien:nth-of-type(4){
+        background-color: var(--couleur-marine);
+    }
+    .appbar .lien:nth-of-type(5){
+        background-color: var(--couleur-marine);
+    }
+    .appbar .lien:nth-of-type(6){
+        background-color: var(--couleur-bleu2-menu);
+    } */
 
     .appbar .hidden{
         display:none;
@@ -106,10 +152,23 @@
     .appbar .icons .langue{
         display:block;
     }
+    .appbar .menu .lien i{
+        font-size: 13rem;
+        /* width:150px;
+        height:150px; */
+    }
+    /*Adapter taille logo*/
+    .appbar .logo img{
+        max-width:160px;
+        height:auto;
+    }
+
 }
 
 /* BREAK TABLET LANDSCAPE UP */
 @media screen and (min-width: 900px) {
+
+
     /*Affichage ou non des icones de menu*/
     /* .appbar .menu,*/ .appbar .icons .menuCubes{ 
         display:none;
@@ -141,7 +200,10 @@
         text-transform: uppercase;
         font-size: 18px;
     }
-    .appbar .menu .lien svg{
+    .appbar .menu .lien p{
+        color : black;
+    }
+    .appbar .menu .lien i{
         display:none;
     }
    
@@ -159,6 +221,7 @@
         min-width:50%;
         justify-content: center;
     }
+ 
     .appbar .menu .lien{
         min-width:18%;
         max-width:20%;
@@ -168,5 +231,3 @@
 
 
 }
-
-

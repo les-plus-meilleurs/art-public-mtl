@@ -14,7 +14,6 @@
     color:#DF8E32; 
     text-decoration:none;
 }
-<<<<<<< HEAD
 
 .filtre.cache{
     /* transform:ScaleY(0); */
@@ -23,8 +22,6 @@
     transform:translateY(40vh);
     z-index:-1;
 }
-=======
->>>>>>> d09b13fb623773256117e64277d11a109e916943
     /*------------------ Choix affichage liste -------------------*/
 .recherche{
     width:100%;
@@ -85,7 +82,7 @@ body{
 }
 .filtre i{
     font-size:3.6rem;
-    padding: 10px;
+    padding: 5px;
 }
 .filtre i{
     background-color: var(--couleur-marine);
@@ -187,23 +184,13 @@ body{
     transform:scaleY(1);
 }
 /* .filtres.selec{
-    transform: ScaleY(1);
+    /* transform: ScaleY(1); */
     transform-origin: 50% 0%;
     transition: transform 235ms;
     transform:translateY(0%);
 } */
 
-<<<<<<< HEAD
 
-=======
-.filtre.cache{
-    /* transform:ScaleY(0); */
-    transform-origin: 50% 0%;
-    transition: transform .15s;
-    transform:translateY(40vh);
-    z-index:-1;
-}
->>>>>>> d09b13fb623773256117e64277d11a109e916943
 .filtre.selec{
     /* transform: ScaleY(1); */
     transform-origin: 50% 0%;

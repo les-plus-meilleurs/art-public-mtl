@@ -1,9 +1,6 @@
 <?php error_reporting(E_ALL ^ E_WARNING);  ?>
 <?php
-<<<<<<< HEAD
 /*
-=======
->>>>>>> d09b13fb623773256117e64277d11a109e916943
     $document = cookie();
     $text_lang = $document->getElementById("lang")->nodeValue;
     $text_titre2 = $document->getElementById("titre2")->nodeValue;
@@ -13,11 +10,7 @@
     $text_menu_apropos = $document->getElementById("menu_apropos")->nodeValue;
     $text_menu_contact = $document->getElementById("menu_contact")->nodeValue;
     $text_menu_compte = $document->getElementById("menu_compte")->nodeValue;
-<<<<<<< HEAD
     $text_droits = $document->getElementById("droits")->nodeValue;*/
-=======
-    $text_droits = $document->getElementById("droits")->nodeValue;
->>>>>>> d09b13fb623773256117e64277d11a109e916943
 ?>
 </main>
 	<footer>
@@ -33,32 +26,32 @@
 				</div>
 				<nav class="navbar">
 					<a class="lien" href="#">
-						<p><?php echo $text_menu_oeuvres ?></p>
+						<p>Oeuvres</p>
 					</a>
 					<img class="separateur" src="'<?php if($page == "artiste" || $page == "oeuvre" || $page == "inscription" || $page =="connexion"){echo "../";}?>../img/icons/ligne.svg" alt="">
 					<a class="lien" href="#">					
-						<p><?php echo $text_menu_artistes ?></p>
+						<p>Artistes</p>
 					</a>
 					<img class="separateur" src="<?php if($page == "artiste" || $page == "oeuvre" || $page == "inscription" || $page =="connexion"){echo "../";}?>../img/icons/ligne.svg" alt="">
 					<a class="lien" href="#">
-						<p><?php echo $text_menu_parcours ?></p>
+						<p>Parcours</p>
 					</a>
 					<img class="separateur" src="<?php if($page == "artiste" || $page == "oeuvre" || $page == "inscription" || $page =="connexion"){echo "../";}?>../img/icons/ligne.svg" alt="">
 					<a class="lien" href="#">
-						<p><?php echo $text_menu_apropos ?></p>
+						<p>À propos</p>
 					</a>
 					<img class="separateur" src="<?php if($page == "artiste" || $page == "oeuvre" || $page == "inscription" || $page =="connexion"){echo "../";}?>../img/icons/ligne.svg" alt="">
 					<a class="lien" href="#">
-						<p><?php echo $text_menu_contact ?></p>
+						<p>Contact</p>
 					</a>
 					<img class="separateur" src="<?php if($page == "artiste" || $page == "oeuvre" || $page == "inscription" || $page =="connexion"){echo "../";}?>../img/icons/ligne.svg" alt="">
 					<a class="lien" href="#">
-						<p><?php echo $text_menu_compte ?></p>
+						<p>Compte</p>
 					</a>
 				</nav>
 				<p>
 					Copyright 2019 - Art Public Montréal<br>
-					<?php echo $text_droits ?>
+					Tous droits réservés
 				</p>
 			</section>
 			

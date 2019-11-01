@@ -3,15 +3,19 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Pacifico&display=swap');
 
 
+/* PAS ACTIF */
+#prochainSprint{
+    color:grey;
+    opacity:0.5;
+}
+
 /**
  * Body CSS
  */
 
- * {box-sizing:border-box}
-
 html,
 body {
-    height: 100%;
+    /* height: 100%; */
     font-family: 'Open Sans', sans-serif;
     margin:0px 0px 0px 0px;
     box-sizing:border-box;
@@ -23,6 +27,7 @@ body{
     align-items: center;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 }
 
 main{
@@ -65,138 +70,6 @@ main .carte .btnAccueil{
     background-color: var(--couleur-fond);
     color: var(--couleur-marine);
 }
-
-main .nvlOeuvres {
-    margin-top:var(--padding-base);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-main .nvlOeuvres h2{
-    margin:var(--padding-base);
-}
-
-/* TEST SLIDER */
-
-/* Slideshow container */
-.slider {
-    max-width: 1000px;
-    position: relative;
-    margin: auto;
-    width:100%;
-  }
-  
-  /* Hide the images by default */
-  .slide {
-    display: none;
-    justify-content: center;
-    width:100%
-  }
-  .slide img{
-      width:100%;
-      /* max-height:270px; */
-  }
-  .slide .img{
-    background-position: 50%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    min-width:100%;
-    height:270px;
-  }
-  .slider .slide:nth-of-type(1) .img{
-    background-image: url(../img/oeuvres/962_1.jpg);
-  }
-  .slider .slide:nth-of-type(2) .img{
-    background-image: url(../img/oeuvres/1099_1.jpg);
-  }
-  .slider .slide:nth-of-type(3) .img{
-    background-image: url(../img/oeuvres/1119_1.jpg);
-  }
-  
-  /* Next & previous buttons */
-  /*Mettre effet de hover*/ 
-  .prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-  }
-  
-  /* Position the "next button" to the right */
-  .prev{
-    left: 5%;
-  }
-  .next {
-    right: 5%;
-    border-radius: 3px 0 0 3px;
-  }
-  
-  /* On hover, add a black background color with a little bit see-through */
-  /* .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
-  } */
-  
-  /* Caption text */
-  /* .text {
-    color: #f2f2f2;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center;
-  } */
-  
-  /* Number text (1/3 etc) */
-  /* .numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-  } */
-  
-  /* The dots/bullets/indicators */
-  .point {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color:#d3d3d3;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-  }
-  
-  .active, .point:hover {
-    background-color: var(--couleur-orange);
-  }
-  
-  /* Fading animation */
-  /* .fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
-  } */
-  
-  /* @-webkit-keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-  }
-  
-  @keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-  } */
 
 
 
@@ -241,7 +114,7 @@ main .nvlOeuvres h2{
     
 }
 
-.carte .image.dummy
+.carte .image .dummy
 {
     background-image: url("../img/placeholder_640_480.jpg");
     
@@ -373,29 +246,95 @@ main .nvlOeuvres h2{
     display: block;
 }
 
+/*------------------ Liste des oeuvres -------------------*/
 
+/* .conteneur_oeuvre_courante {
+    display:flex;
+    flex-direction: column;
+    padding: 15px;
+    margin: 10px;
+} */
+
+/* .conteneur_oeuvre_courante:nth-child(2n-1) {
+    background-color: var(--couleur-fond);
+} */
+
+/* .conteneur_oeuvre_courante:nth-child(2n) {
+    background-color: var(--couleur-bleu);
+} */
+
+/* .image_oeuvre_courante {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} */
+/* 
+.image_oeuvre_courante img {
+    
+    max-width: 100%;
+} */
+/* 
+.texte_pied_image {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+} */
+
+/* .auteur_liste_oeuvre a {
+    color: var(--couleur-marine);
+    font-size: 24px;
+} */
+
+/* .date_creation {
+    color: var(--couleur-marine);
+    font-size: 18px;
+} */
+
+/* .auteur_liste_oeuvre {
+    font-family: 'Pacifico';
+} */
+/* 
 .oeuvres
 {
     width: 100%;
-}
+} */
 
-/*------------------Section d'une oeuvre -------------------*/
 
-.contenu.uneOeuvre
+
+/*------------------ Affichage d'une oeuvre -------------------*/
+
+/* .uneOeuvre_titre {
+    font-family: Pacifico;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 63px;
+    text-align: left;
+    padding-left: 20px;
+    color: var(--couleur-marine);
+
+} */
+
+/* .contenu.uneOeuvre
 {
     padding-left: 0px;
-}
+} */
 
-.uneOeuvre > .oeuvre
-{
-    width: 900px;
-    
+/* .uneOeuvre > .oeuvre*/
+/* { */
+    /* width: 900px; */
+    /*
+    flex-direction: column;
     display: flex;
     background-color: #FFF;
     margin: 0px auto;
-}
+    align-items: flex-start;
+} 
+*/
 
-.uneOeuvre > .oeuvre > .titre {
+/* .uneOeuvre > .oeuvre > .titre {
     font-family: 'Pacifico';
     font-style: normal;
     font-weight: normal;
@@ -403,30 +342,30 @@ main .nvlOeuvres h2{
     line-height: 63px;
     text-align: center;
     color: #103C61;
-}
+} */
 
-.uneOeuvre > .oeuvre > .image
+/* .uneOeuvre > .oeuvre > .image
 {
     width: 100%;
     height: var(--oeuvre-hauteur-image);
     position: relative;
     overflow: hidden;
-}
-.uneOeuvre > .oeuvre > .image > img
+} */
+/* .uneOeuvre > .oeuvre > .image > img
 {
     width: 100%;
     
     position: relative;
-}
+} */
 
 
-.uneOeuvre > .oeuvre .image.dummy
+/* .uneOeuvre > .oeuvre .image .dummy
 {
     background: url("../img/placeholder_640_480.jpg") no-repeat center;
     background-size: cover;
-}
+} */
   
-.uneOeuvre > .oeuvre .image > .titre
+/* .uneOeuvre > .oeuvre .image > .titre
 {
     position: absolute;
     bottom: 0px;
@@ -438,52 +377,78 @@ main .nvlOeuvres h2{
     margin-bottom: 16px;
     width: 100%;
     color: #ffffff;
-}
+} */
 
-
+/* 
 .uneOeuvre > .oeuvre .texte
 {
     width: 100%;
-}
+} */
 
-
+/* 
 .uneOeuvre > .retour
 {
     display: flex;
     flex-direction: row;
     align-items: center;
-    color: #DF8E32;
+    color: var(--couleur-orange);
     font-size: 24px;
     margin-left: var(--marge-gauche);
     text-decoration: none;
     background: url("/artPublic/img/icons/ic_keyboard_backspace_white_48px.svg") no-repeat;
     height: 48px;
-}
+} */
 
-.uneOeuvre > .retour a
+/* .uneOeuvre > .retour a
 {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 19px;
     text-decoration: none;
-    color: #DF8E32;
-    padding-left: 48px;
-}
+    color:var(--couleur-orange);
+    padding-left: 20px;
+} */
 
+/* .uneOeuvre p {
+    font-family: Open Sans;
+    padding: 25px 20px;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: left;
+    padding-left: 20px;
+    color: var(--couleur-marine);
+} */
 
+/* .conteneur_partager {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+} */
 
-.lien-pager
+/* .conteneur_btn_partager {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+} */
+
+/* .lien-pager
 {
     margin-left: 5px;
     margin-top: 5px;
-}
+} */
 
 /**
  * Google map
  */
-.carte-generale
+/* .carte-generale
 {
     width: 900px;
     height: 500px;
     margin-top: 32px;
-}
+} */
 
 /**
  * Recherche
@@ -534,6 +499,7 @@ main .nvlOeuvres h2{
         
     display: flex;
     flex-wrap: wrap;
+    align-items: flex-start;
     /* sticky footer */
     /* margin-bottom: -100px;
     padding-bottom: 100px; */
@@ -543,3 +509,13 @@ main .nvlOeuvres h2{
 {
     display: none;
 }
+#hidden{
+    display:none;
+}
+
+@media screen and (min-width: 1200px) {
+    main{
+        max-width:1350px;
+    }
+
+} 

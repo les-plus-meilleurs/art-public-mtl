@@ -1,13 +1,4 @@
-<<<<<<< HEAD
 ﻿<section class="recherche">
-=======
-<?php error_reporting(E_ALL ^ E_WARNING);  ?>
-<?php
-    $document = cookie();
-?>
-
-<section class="recherche">
->>>>>>> d09b13fb623773256117e64277d11a109e916943
 	<div><i class="vueListe material-icons">list</i></div>
 	<div><i class="vueImage focus material-icons">photo</i></div>
 </section>

@@ -1,12 +1,7 @@
 <?php error_reporting(E_ALL ^ E_WARNING);  ?>
 <?php
-<<<<<<< HEAD
    /* $document = cookie();
     $text_plus_info = $document->getElementById("plus_info")->nodeValue;*/
-=======
-    $document = cookie();
-    $text_plus_info = $document->getElementById("plus_info")->nodeValue;
->>>>>>> d09b13fb623773256117e64277d11a109e916943
 ?>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8S4xg4xxyN0iGGBdUOpR3xRa4DIkD710&callback=initMap"
 async defer>
@@ -74,11 +69,7 @@ TODO : enlever inline CSS
 			if(oeuvre[8] !== undefined){
 				aVis="favorite";
 			}
-<<<<<<< HEAD
 			var content = '<div><p class="bulle">'+oeuvre[0]+'</p>'+'<p class="bulle">'+oeuvre[3]+', '+oeuvre[4]+'</p>'+'<a href="oeuvre/'+oeuvre[5]+'" class="bulle2">'+"Plus d'informations >"+'</a></div>';
-=======
-			var content = '<div><p class="bulle">'+oeuvre[0]+'</p>'+'<p class="bulle">'+oeuvre[3]+', '+oeuvre[4]+'</p>'+'<a href="oeuvre/'+oeuvre[5]+'" class="bulle2">'+"<?php echo $text_plus_info; ?> >"+'</a></div>';
->>>>>>> d09b13fb623773256117e64277d11a109e916943
             var infowindow = new google.maps.InfoWindow();
             
             //paramètres des marqueurs
