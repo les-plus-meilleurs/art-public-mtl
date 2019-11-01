@@ -1,5 +1,5 @@
 <?php error_reporting(E_ALL ^ E_WARNING);  ?>
-<?php 
+<?php
     $document = cookie();
     $text_localisation = $document->getElementById("localisation")->nodeValue;
     $text_adresse1 = $document->getElementById("adresse1")->nodeValue;
@@ -253,64 +253,81 @@
         }
     </script>
 <section class="contenu-contact">
+
     <?php if($message!=null) {
         echo($message);
     }
     ?>
     <div class="systeme_onglets">
         <div class="onglets">
-            <span class="onglet_0 onglet" id="onglet_details" onclick="javascript:change_onglet('details');"><?php echo $text_localisation; ?></span>
-            <span class="onglet_0 onglet" id="onglet_artiste" onclick="javascript:change_onglet('artiste');"><?php echo $text_ecrivez; ?></span>
-            <span class="onglet_0 onglet" id="onglet_carte" onclick="javascript:change_onglet('carte');"><?php echo $text_e_medias; ?></span>
+            <span class="onglet_0 onglet" id="onglet_localisation" onclick="javascript:change_onglet('localisation');"><?php echo $text_localisation; ?></span>
+            <span class="onglet_0 onglet" id="onglet_ecrivez" onclick="javascript:change_onglet('ecrivez');"><?php echo $text_ecrivez; ?></span>
+            <span class="onglet_0 onglet" id="onglet_medias" onclick="javascript:change_onglet('medias');"><?php echo $text_e_medias; ?></span>
         </div>
         <div class="contenu_onglets">
-            <div class="contenu_onglet" id="contenu_onglet_details">
+            <div class="contenu_onglet" id="contenu_onglet_localisation">
                 <section class="texte">
                     <p>
-                    <strong><?php echo $text_adresse1; ?></strong>
+                    <strong>Campus principal</strong>
                     <br>
-                    <?php echo $text_adresse2; ?>
+                    3800, rue Sherbrooke Est
                     <br>
-                    <?php echo $text_adresse3; ?>
+                    Montr&eacute;al (Qu&eacute;bec) H1X 2A2
                     <br>
-                    <?php echo $text_adresse4; ?>
+                    T&eacute;l.: 514 254-7131
                     </p>
                     <div class="carte_contact">
                     <div id="map" class="carte" style="height:480px; width:640px;"></div>
-<!--                    <iframe src="https://www.google.com/maps/d/embed?mid=1nrpE60oVxUEQEUOvHFRT5c-33P5zf6Ix" width="640" height="480"></iframe>-->
+<!--                    <iframe class="frame_carte" src="https://www.google.com/maps/d/embed?mid=1nrpE60oVxUEQEUOvHFRT5c-33P5zf6Ix"></iframe>-->
                     </div>
                 </section>
             </div>
-            <div class="contenu_onglet" id="contenu_onglet_artiste">
+            <div class="contenu_onglet" id="contenu_onglet_ecrivez">
                 <form action="/art-public-mtl/api/contact" method="post">
                     <fieldset>
-                        <h3><?php echo $text_ecrivez; ?></h3>
-                        <?php echo $text_e_nom; ?><br>
-                        <input type="text" name="nom" value="">
-                        <br>
-                        <?php echo $text_e_prenom; ?><br>
-                        <input type="text" name="prenom" value="">
-                        <br>
-                        <?php echo $text_e_courriel; ?><br>
-                        <input type="text" name="courriel" value="">
-                        <br>
-                        <?php echo $text_e_sujet; ?>
-                        <select name="sujet">
-                            <option value="Proposition"><?php echo $text_e_suj1; ?></option>
-                            <option value="Demande"><?php echo $text_e_suj2; ?></option>
-                            <option value="Signaler"><?php echo $text_e_suj3; ?></option>
-                            <option value="Autre"><?php echo $text_e_suj4; ?></option>
-                        </select>
-                        <br>
-                        <p><?php echo $text_e_commentaire; ?></p>
-                        <br>
-                        <textarea name="message" rows="10" cols="30"></textarea>
-                        <br><br>
-                        <input type="submit" value="<?php echo $text_e_envoyer; ?>">
+			<h3><?php echo $text_ecrivez; ?></h3>
+                        <div>
+                          <label for="nom">
+                            <p class="pContact titreBtn"><input type="text" name="nom" value=""></p>
+                          </label>
+                          <input type="text" name="nom" value="">
+                        </div>
+                        <div>
+                          <label for="prenom">
+                            <p class="pContact titreBtn"><?php echo $text_e_prenom; ?></p>
+                          </label>
+                          <input type="text" name="prenom" value="">
+                        </div>
+                        <div>
+                          <label for="courriel">
+                            <p class="pContact titreBtn"><?php echo $text_e_courriel; ?></p>
+                          </label>
+                          <input type="text" name="courriel" value="">
+                        </div>
+                        <div>
+                          <label for="sujet">
+                            <p class="pContact titreBtn"><?php echo $text_e_sujet; ?></p>
+                          </label>
+                          <select name="sujet">
+                              <option value="Proposition">Proposition d'oeuvre</option>
+                              <option value="Demande">Demande de compte</option>
+                              <option value="Signaler">Signaler des domages d'une oeuvre</option>
+                              <option value="Autre">Autre</option>
+                          </select>
+                        </div>
+                        <div>
+                          <label for="message">
+                            <p class="pContact titreBtn"><?php echo $text_e_commentaire; ?></p>
+                          </label>
+                          <textarea name="message" rows="10" cols="30"></textarea>
+                        </div>
+                        <div>
+                          <input class="btnContact btnLarge" type="submit" value="<?php echo $text_e_envoyer; ?>">
+                        </div>
                     </fieldset>
                 </form>
             </div>
-            <div class="contenu_onglet" id="contenu_onglet_carte">
+            <div class="contenu_onglet" id="contenu_onglet_medias">
                 <section class="medias">
                     <div><i class="fa fa-linkedin" style="font-size:48px;color:dimgray"></i>Linkedin</div>
                     <div><i class="fa fa-pinterest-p" style="font-size:48px;color:dimgray"></i>Pinterest</div>

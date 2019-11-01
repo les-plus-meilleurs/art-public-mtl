@@ -27,7 +27,7 @@
     $text_apropos = $document->getElementById("menu_apropos")->nodeValue;
 ?>
 <section class="contenu-apropos">
-    <h3><?php echo $text_apropos; ?></h3>
+
     <div class="systeme_onglets">
         <div class="onglets">
             <span class="onglet_0 onglet" id="onglet_details" onclick="javascript:change_onglet('details');"><?php echo $text_presentation; ?></span>
