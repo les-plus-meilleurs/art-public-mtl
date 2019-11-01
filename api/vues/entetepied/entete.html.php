@@ -41,7 +41,6 @@
 	<meta name="viewport" content="width=device-width">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Pacifico&display=swap" rel="stylesheet">
 
-	history
 	<?php
 		if ($page== ""){			
 			cssBase("");
