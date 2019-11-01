@@ -1,6 +1,6 @@
-<?php error_reporting(E_ALL ^ E_WARNING);  ?>
+﻿<?php error_reporting(E_ALL ^ E_WARNING);  ?>
 <?php
-    $document = cookie();
+    /*$document = cookie();
     $text_localisation = $document->getElementById("localisation")->nodeValue;
     $text_adresse1 = $document->getElementById("adresse1")->nodeValue;
     $text_adresse2 = $document->getElementById("adresse2")->nodeValue;
@@ -17,7 +17,7 @@
     $text_e_suj4 = $document->getElementById("e_suj4")->nodeValue;
     $text_e_commentaire = $document->getElementById("e_commentaire")->nodeValue;
     $text_e_envoyer = $document->getElementById("e_envoyer")->nodeValue;
-    $text_e_medias = $document->getElementById("medias")->nodeValue;
+    $text_e_medias = $document->getElementById("medias")->nodeValue;*/
 ?>
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8S4xg4xxyN0iGGBdUOpR3xRa4DIkD710&callback=initMap"
@@ -28,7 +28,7 @@
     //data oeuvres
     function setMarkers(map)
     {
-        var oeuvre = ["<?php echo $text_adresse1; ?>", 45.551088, -73.5557277, ""];
+        var oeuvre = ["Campus principal", 45.551088, -73.5557277, ""];
         //marqueur pour chaque oeuvre
         var icon = {
             url: "../img/icons/mapmarker.png", // url
@@ -232,7 +232,7 @@
                 ],
                 {name: 'Styled Map'});
             //options default la carte Google
-            var oeuvre = ["<?php echo $text_adresse1; ?>", 45.551088, -73.5557277, ""];
+            var oeuvre = ["Campus principal", 45.551088, -73.5557277, ""];
             var options = {
                 center: {lat: oeuvre[1], lng: oeuvre[2]},
                 zoom: 17,
@@ -260,9 +260,9 @@
     ?>
     <div class="systeme_onglets">
         <div class="onglets">
-            <span class="onglet_0 onglet" id="onglet_localisation" onclick="javascript:change_onglet('localisation');"><?php echo $text_localisation; ?></span>
-            <span class="onglet_0 onglet" id="onglet_ecrivez" onclick="javascript:change_onglet('ecrivez');"><?php echo $text_ecrivez; ?></span>
-            <span class="onglet_0 onglet" id="onglet_medias" onclick="javascript:change_onglet('medias');"><?php echo $text_e_medias; ?></span>
+            <span class="onglet_0 onglet" id="onglet_localisation" onclick="javascript:change_onglet('localisation');">Localisation</span>
+            <span class="onglet_0 onglet" id="onglet_ecrivez" onclick="javascript:change_onglet('ecrivez');">&Eacute;crivez-nous</span>
+<!--            <span class="onglet_0 onglet" id="onglet_medias" onclick="javascript:change_onglet('medias');"><?php //echo $text_e_medias; ?></span>-->
         </div>
         <div class="contenu_onglets">
             <div class="contenu_onglet" id="contenu_onglet_localisation">
@@ -286,27 +286,27 @@
                     <fieldset>
                         <div>
                           <label for="nom">
-                            <p class="pContact titreBtn"><?php echo $text_e_nom; ?></p>
+                            <p class="pContact titreBtn">Nom</p>
                           </label>
-                          <input type="text" name="nom" value="">
+                          <input type="text" class="inputText" name="nom" value="">
                         </div>
                         <div>
                           <label for="prenom">
-                            <p class="pContact titreBtn"><?php echo $text_e_prenom; ?></p>
+                            <p class="pContact titreBtn">Prenom</p>
                           </label>
-                          <input type="text" name="prenom" value="">
+                          <input class="inputText" type="text" name="prenom" value="">
                         </div>
                         <div>
                           <label for="courriel">
-                            <p class="pContact titreBtn"><?php echo $text_e_courriel; ?></p>
+                            <p class="pContact titreBtn">courriel</p>
                           </label>
-                          <input type="text" name="courriel" value="">
+                          <input class="inputText" type="text" name="courriel" value="">
                         </div>
                         <div>
                           <label for="sujet">
-                            <p class="pContact titreBtn"><?php echo $text_e_sujet; ?></p>
+                            <p class="pContact titreBtn">sujet</p>
                           </label>
-                          <select name="sujet">
+                          <select name="sujet" class="inputText">
                               <option value="Proposition">Proposition d'oeuvre</option>
                               <option value="Demande">Demande de compte</option>
                               <option value="Signaler">Signaler des domages d'une oeuvre</option>
@@ -315,12 +315,12 @@
                         </div>
                         <div>
                           <label for="message">
-                            <p class="pContact titreBtn"><?php echo $text_e_commentaire; ?></p>
+                            <p class="pContact titreBtn">Commentaire</p>
                           </label>
-                          <textarea name="message" rows="10" cols="30"></textarea>
+                          <textarea class="inputMsg" name="message" rows="10" cols="30"></textarea>
                         </div>
                         <div>
-                          <input class="btnContact btnLarge" type="submit" value="<?php echo $text_e_envoyer; ?>">
+                          <input class="btnContact btnLarge" type="submit" value="Envoyer">
                         </div>
                     </fieldset>
                 </form>

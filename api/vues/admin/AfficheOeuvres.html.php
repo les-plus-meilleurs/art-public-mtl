@@ -1,4 +1,4 @@
-
+﻿
 
 	<?php
 //	var_dump($aData);
@@ -13,7 +13,7 @@
 				<a id="menu_oeuvre" href="/art-public-mtl/api/admin/oeuvre"><img src="../../img/icons/imageBlanch.svg" alt="icon image"><p id="menuOeuvres" class="text_menu">Oeuvres</p></a>
 				<a id="menu_artistes" href="/art-public-mtl/api/admin/artiste"><img src="../../img/icons/paletteBlanch.svg" alt="icon image"><p class="text_menu">Artistes</p></a>
 				<a id="menu_utilisateurs" href="/art-public-mtl/api/admin/utilisateur"><img src="../../img/icons/personBlanch.svg" alt="icon image"><p class="text_menu">Utilisateurs</p></a>
-				<a id="menu_contact" href="/art-public-mtl/api/admin/contact"><img src="../../img/icons/comment.png" alt="icon image"><p class="text_menu">Commentaires</p></a>
+				<a id="menu_contact" href="/art-public-mtl/api/admin/contact"><img src="../../img/icons/comment.png" alt="icon image"><p class="text_menu">Messagerie</p></a>
 			</aside>
 			<section class="contenu_listeOeuvres">
 				<section class="recherche">
@@ -83,8 +83,10 @@
   <div class="modal-content">
     <div class="confirm-buttons">
     <p>Etes-vous sur de vouloir supprimer cet oeuvre ?</p>
+<div class="liens">
         <a href="" id="linkSupprimer" class="confirm-ok">Supprimer</a>
         <a class="close confirm-ok">Annuler</a>
+</div>
     </div>
   </div>
 

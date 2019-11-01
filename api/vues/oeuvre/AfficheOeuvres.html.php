@@ -1,93 +1,4 @@
-<?php error_reporting(E_ALL ^ E_WARNING);  ?>
-<?php
-    $document = cookie();
-?>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8S4xg4xxyN0iGGBdUOpR3xRa4DIkD710&callback=initMap"
-async defer>
-</script>
-<script>    
-    var map;        
-    //data oeuvres      
-    var oeuvres = [];
-    console.log(oeuvres);
-    let aOeuvres=<?php echo(json_encode($aData));?>;
-    aOeuvres.forEach(function(element)
-    {
-        var titre = element["Titre"];
-        var lat = element["CoordonneeLatitude"];
-        var lng = element["CoordonneeLongitude"];
-        var artiste = element["Artistes"];
-        var nom = artiste[0]["Nom"];
-        var date = element["dateCreation"];
-        if(date=="NULL" || typeof date != "string"){
-            date="";
-        }else{
-            date = date.substr(6,4);
-        }
-        var id = element["id_oeuvre"];
-        var oeuvre = [];
-        oeuvre.push(titre,parseFloat(lat),parseFloat(lng),nom,date,parseFloat(id));
-        oeuvres.push(oeuvre);
-    })
-    function setMarkers(map) 
-    {
-        //marqueur pour chaque oeuvre
-        var icon = {
-            url: "../img/icons/mapmarker.png", // url
-             scaledSize: new google.maps.Size(28, 40), // size
-        };        
-        //pour chaque oeuvre dans le tableau
-        for (var i = 0; i < oeuvres.length; i++) 
-        {
-            var oeuvre = oeuvres[i];           
-            //contenu de la bulle d'information
-            var content = '<div><p style="color:#103C61; font-size:30px; font-family: Open Sans; font-style: normal; font-weight: bold; font-size: 18px; line-height: 25px; display: flex; align-items: center; text-transform: uppercase;">'+oeuvre[0]+'</p>'+'<p style="color:#103C61;">'+oeuvre[3]+', '+oeuvre[4]+'</p>'+'<a href="oeuvre/'+oeuvre[5]+'" style="color:#DF8E32; text-decoration:none;">'+"Plus d'informations >"+'</a></div>';
-            var infowindow = new google.maps.InfoWindow();
-            
-            //paramètres des marqueurs
-            var marker = new google.maps.Marker({
-                position: {lat: oeuvre[1], lng: oeuvre[2]},
-                map: map,
-                icon: icon,
-                title: oeuvre[0]
-            });  
-            
-            //ouvrir la bulle d'information de l'oeuvre
-            google.maps.event.addListener(marker, 'click', function(content)
-            {
-                return function()
-                {
-                    infowindow.setContent(content);
-                    infowindow.open(map, this);
-                }
-            }(content));
-            // Limites de la carte
-            var allowedBounds = new google.maps.LatLngBounds(
-                new google.maps.LatLng(45.4079982, -73.9446209), 
-                new google.maps.LatLng(45.6876557, -73.5051969));
-                // Après avoir drag (glissé) le curseur
-                google.maps.event.addListener(map, 'dragend', function()
-                {
-                    if (allowedBounds.contains(map.getCenter())) return;
-                 // Rediriger la carte vers la dernière limite connue
-                 var c = map.getCenter(),
-                     x = c.lng(),
-                     y = c.lat(),
-                     maxX = allowedBounds.getNorthEast().lng(),
-                     maxY = allowedBounds.getNorthEast().lat(),
-                     minX = allowedBounds.getSouthWest().lng(),
-                     minY = allowedBounds.getSouthWest().lat();
-                 if (x < minX) x = minX;
-                 if (x > maxX) x = maxX;
-                 if (y < minY) y = minY;
-                 if (y > maxY) y = maxY;
-                 map.setCenter(new google.maps.LatLng(y, x));
-               });
-        }
-    }        
-    </script>
-<script src = "../js/initMapOeuvres.js"></script>
-<section class="recherche">
+﻿<section class="recherche">
 	<div><i class="vueListe material-icons">list</i></div>
 	<div><i class="vueImage focus material-icons">photo</i></div>
 </section>
@@ -255,8 +166,17 @@ $listeLettres = array(0=>array("lettre"=>"A","ok"=>false),
 				
 					}			
 			?>
-			<section class="oeuvre" data-id="<?php echo $id_oeuvre ?>">
+			<section class="oeuvre oeuvreText" data-id="<?php echo $id_oeuvre ?>">
+				<?php
+				if(isset($_SESSION["user"]) && $_SESSION['user']=='ok'){
+							?>
+				<section class="compteText">
+						<i class="material-icons aVisiter text" data-vis="<?php echo $aVisiter ?>" data-id="<?php echo $id_oeuvre ?>">star_border</i>
+						<i class="material-icons favori text" data-fav="<?php echo $favoris ?>"  data-id="<?php echo $id_oeuvre ?>">favorite_border</i>
+				</section>
+<?php } ?>
 				<a class="lienOeuvre lienArtisteA" href="oeuvre/<?php echo $id_oeuvre; ?>"><?php  echo $Titre;?></a>
+				
 					<?php 
 					
 					$j=count($Artistes);
@@ -265,6 +185,7 @@ $listeLettres = array(0=>array("lettre"=>"A","ok"=>false),
 						$j=$j-1;
 						extract($artiste);
 						?>
+						
 						<a class="lienArtiste" href="artiste/<?php echo $id_artiste; ?>">
 						<?php 
 						if(isset($Nom) && $Nom!=""){
@@ -278,15 +199,13 @@ $listeLettres = array(0=>array("lettre"=>"A","ok"=>false),
 							echo ", ";
 						}
 						?></a>
+						
+						
 					<?php			
 					}
-
 					if(isset($_SESSION["user"]) && $_SESSION['user']=='ok'){
 					?>
-						<section class="compte">
-							<i class="material-icons aVisiter" data-vis="<?php echo $aVisiter ?>" data-id="<?php echo $id_oeuvre ?>">star_border</i>
-							<i class="material-icons favori" data-fav="<?php echo $favoris ?>"  data-id="<?php echo $id_oeuvre ?>">favorite_border</i>
-						</section>
+						
 					<?php
 					}
 					?>
@@ -304,9 +223,6 @@ $listeLettres = array(0=>array("lettre"=>"A","ok"=>false),
             <section class="oeuvres flex wrap">
 						<?php
         
-//echo '<pre>';
-//print_r($aData);
-//echo '</pre>';
                         $data2 = [];
 						foreach ($aData as $cle => $oeuvre) {
                             array_push($data2, $oeuvre);
@@ -317,8 +233,8 @@ $listeLettres = array(0=>array("lettre"=>"A","ok"=>false),
 							if(isset($_SESSION["user"]) && $_SESSION['user']=='ok'){
 							?>
 							<section class="compte">
-								<i class="material-icons aVisiter" data-vis="<?php echo $aVisiter ?>" data-id="<?php echo $id_oeuvre ?>">star_border</i>
-								<i class="material-icons favori" data-id="<?php echo $id_oeuvre ?>" data-fav="<?php echo $favoris ?>" >favorite_border</i>
+								<i class="material-icons aVisiter photo" data-vis="<?php echo $aVisiter ?>" data-id="<?php echo $id_oeuvre ?>">star_border</i>
+								<i class="material-icons favori photo" data-id="<?php echo $id_oeuvre ?>" data-fav="<?php echo $favoris ?>" >favorite_border</i>
 							</section>
 							<?php } ?>
 			                    <header class="image dummy image_oeuvre_courante">
@@ -375,13 +291,11 @@ $listeLettres = array(0=>array("lettre"=>"A","ok"=>false),
 							 */
 						}
 						?>
-					</section>				
+					</section>
+				
 			</section>
 			<article class="filtre selec">
-				<i class="material-icons">filter_list</i>
-			</article>
-
-			<article class="favCarte selec">
-				<i class="material-icons">star_border</i>
-				<i class="material-icons">favorite_border</i>
+				<!-- <i class="material-icons">filter_list</i> -->
+				<svg class="svg-icon_filter" width="29" height="31" viewBox="0 0 32 33" xmlns="http://www.w3.org/2000/svg"><g stroke="white" stroke-width="3"><path d="M32 6.5H0M32 16.5H0M32 26.5H0"></path><circle fill="var(--couleur-marine)" cx="22" cy="6.5" r="5"></circle><circle fill="var(--couleur-marine)" cx="10" cy="26.5" r="5"></circle></g></svg>
+				<!-- <span>Filtres</span> -->
 			</article>

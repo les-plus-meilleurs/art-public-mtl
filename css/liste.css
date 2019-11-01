@@ -20,7 +20,7 @@ main .listeOeuvresText{
     flex-direction: column;
     margin: var(--padding-base) 0;  
 }
-main .listeOeuvresText a{
+main .listeOeuvresText a, .compteText{
     padding-left: calc(var(--padding-base) * 3);
     font-size:1.4rem;
     padding-top: calc(var(--padding-base) / 3);

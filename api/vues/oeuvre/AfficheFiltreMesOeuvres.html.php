@@ -1,6 +1,6 @@
 <?php error_reporting(E_ALL ^ E_WARNING);  ?>
 <?php
-    $document = cookie();
+    //$document = cookie();
 ?>
 <section class="recherche">
 		<div><i class="vueListe material-icons">list</i></div>

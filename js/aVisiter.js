@@ -7,18 +7,45 @@ window.addEventListener("load", function(){
        // console.log(aVisiter.dataset.vis);
         if(aVisiter.dataset.vis !=""){
             aVisiter.innerHTML = "star";
+            aVisiter.classList.add("focus");
         }
         aVisiter.addEventListener("click", function(evt){
             let icone =evt.target;
+            let typeIconeTest;
+            if(icone.classList.contains("text")){
+                typeIconeTest="text";
+            }else{
+                typeIconeTest="photo";
+            }
+
             if(icone.innerHTML == "star_border"){
                 icone.innerHTML = "star";
+                icone.classList.add("focus");
                 //console.log(icone.dataset.id);
                 //console.log(id);
             }else if(icone.innerHTML == "star"){
                 icone.innerHTML = "star_border";
+                icone.classList.remove("focus");
             }
             let id=icone.dataset.id;
             ajax(id);
+
+            //Changer l'icone sur l'autre liste (texte ou photo)
+            for(let i=0; i<iconesAVisiter.length; i++){
+                if(id== iconesAVisiter[i].dataset.id){
+                    if(!iconesAVisiter[i].classList.contains(typeIconeTest)){
+                        //console.log(iconesAVisiter[i]);
+                        if(iconesAVisiter[i].innerHTML == "star_border"){
+                            iconesAVisiter[i].innerHTML = "star";
+                            iconesAVisiter[i].classList.add("focus");
+            
+                        }else if(iconesAVisiter[i].innerHTML == "star"){
+                            iconesAVisiter[i].innerHTML = "star_border";
+                            iconesAVisiter[i].classList.remove("focus");
+                        }
+                    }
+                }
+            }
         });
     });
 

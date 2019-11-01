@@ -1,4 +1,4 @@
-<?php error_reporting(E_ALL ^ E_WARNING);  ?>
+﻿<?php error_reporting(E_ALL ^ E_WARNING);  ?>
 <?php
     $document = cookie();
 ?>
@@ -100,7 +100,7 @@ foreach ($Noms as $cle => $artiste) {
 		if(!isset($test[$i])){
 			$test[$i]=false;
 		}
-		if ($nom[0] == $lettre["lettre"] && $lettre["ok"] == false && $test[$i] !== true){
+		if ($nom == $lettre["lettre"] && $lettre["ok"] == false && $test[$i] !== true){
 			echo '<div id="'.$lettre["lettre"].'"></div>';
 			$test[$i]=true;
 		}

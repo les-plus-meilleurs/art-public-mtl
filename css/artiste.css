@@ -44,6 +44,9 @@ main>section:not(.sesOeuvres){
     background-color: var(--couleur-fond);
     padding: var(--padding-base);
 }
+.sesOeuvres h2{
+    margin-bottom:var(--padding-base);
+}
 
 /*LIENS EXTERNES*/
 .liensExt{
@@ -56,9 +59,22 @@ main>section:not(.sesOeuvres){
     margin: var(--padding-base);
 }
 
+.uneOeuvre .img {
+           height: 270px;
+            margin-bottom:5px;
+            position:relative;
+            width:100%; 
+            background-position: center;
+        }
+.uneOeuvre{
+    margin-bottom:var(--padding-base);
+}
+
 /* BREAK TABLET PORTRAIT UP */
 @media screen and (min-width: 600px) {
-
+.uneOeuvre{
+    max-width:50%;
+}
 }
 
 /* BREAK TABLET LANDSCAPE UP */
@@ -74,5 +90,8 @@ main>section:not(.sesOeuvres){
 /* BREAK DESKTOP UP */
 @media screen and (min-width: 1200px) {
 
+.uneOeuvre{
+    max-width:50%;
+}
 
 }

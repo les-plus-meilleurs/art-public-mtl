@@ -14,11 +14,16 @@ footer{
     box-sizing:border-box;
     padding: var(--padding-base);
     margin-top: var(--padding-base);
+    justify-content: center;
 }
 footer .contenu{
     padding: var(--padding-base);
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+footer .liens{
+    align-items: center;
 }
 
 footer p{
@@ -47,12 +52,14 @@ footer > #p_footerAdmin{
 }
 
 
-footer .icons svg{
-    width:30px;
-    height:30px;
+footer .icons {
+    /* width:30px; */
+    /* height:30px; */
     /* background-color:var(--couleur-marine); */
     /* padding: 10px; */
     /* border-radius:48%; */
+    align-items: center;
+    justify-content: center;
 }
 footer .icons  a{
     margin: var(--padding-base);
@@ -81,6 +88,12 @@ footer .navbar{
 }
 footer a{
     color: var(--couleur-marine);
+}
+footer .icons svg{
+    padding:0;
+    width:30px;
+    height:30px;
+    margin:5px;
 }
 
 /* BREAK TABLET PORTRAIT UP */
