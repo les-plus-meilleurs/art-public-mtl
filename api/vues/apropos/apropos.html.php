@@ -17,8 +17,8 @@
     $text_faq_q1_p9 = $document->getElementById("faq_q1_p9")->nodeValue;
     $text_faq_q2 = $document->getElementById("faq_q2")->nodeValue;
     $text_faq_q2_p1 = $document->getElementById("faq_q2_p1")->nodeValue;
-    $text_faq_q2_p1 = $document->getElementById("faq_q2_p1")->nodeValue;
-    $text_faq_q2_p1 = $document->getElementById("faq_q2_p1")->nodeValue;
+    $text_faq_q2_p2 = $document->getElementById("faq_q2_p2")->nodeValue;
+    $text_faq_q2_p3 = $document->getElementById("faq_q2_p3")->nodeValue;
     $text_faq_q3 = $document->getElementById("faq_q3")->nodeValue;
     $text_faq_q3_p1 = $document->getElementById("faq_q3_p1")->nodeValue;
     $text_faq_q3_p2 = $document->getElementById("faq_q3_p2")->nodeValue;
@@ -51,7 +51,7 @@
                 <div class="panel">
                     <p><?php echo $text_faq_q1_p1; ?></p>
                     <br>
-                    <strong><?php echo $text_faq_q1_p2; ?></strong> 
+                    <strong><?php echo $text_faq_q1_p2; ?></strong>
                     <br>
                     <p><?php echo $text_faq_q1_p3; ?></p>
                     <br>

@@ -10,19 +10,19 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Pacifico&display=swap" rel="stylesheet">
 
 	<?php
-		if ($page== ""){			
+		if ($page== ""){
 			cssBase("");
 			echo '<link rel="stylesheet" href="../css/home.css" type="text/css" media="screen">';
 			echo '<link rel="stylesheet" href="../css/slider.css" type="text/css" media="screen">';
 			echo '<script src="../js/slider.js"></script>';
 			jsBase("");
-		} 
+		}
 		else if ($page== "artistes"){
 			cssBase("artistes");
 			echo '<link rel="stylesheet" href="../css/artistes.css" type="text/css" media="screen">';
 			jsBase("artistes");
 			echo '<script src="../js/liste.js"></script>';
-		} 
+		}
 		else if ($page== "artiste"){
 			cssBase("artiste");
 			echo '<link rel="stylesheet" href="../../css/artiste.css" type="text/css" media="screen">';
@@ -30,8 +30,8 @@
 			jsBase("artiste");
 			echo '<script src="../../js/slider.js"></script>';
 			echo '<script src="../../js/imgOeuvre.js"></script>';
-			
-		}  
+
+		}
 		else if ($page== "oeuvres"){
 			cssBase("oeuvres");
 			echo '<link rel="stylesheet" href="../css/oeuvres.css" type="text/css" media="screen">';
@@ -44,8 +44,8 @@
 			echo '<script src="../js/liste.js"></script>';
 			echo '<script src="../js/sliderDate.js"></script>';
 			echo '<script src="../js/favoris.js"></script>';
-			
-		} 
+
+		}
 		else if ($page== "oeuvre"){
 			cssBase("oeuvre");
 			echo '<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">';
@@ -54,21 +54,22 @@
 			echo '<script src="../../js/imgOeuvre.js"></script>';
 			echo '<script src="../../js/carteOeuvre.js"></script>';
 			jsBase("oeuvre");
-		} 
+		}
 		else if ($page== "apropos"){
 			cssBase("apropos");
 			echo '<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">';
 			echo '<script src="../js/onglets.js"></script>';
 			echo '<script src="../js/accordeon.js"></script>';
 			jsBase("apropos");
-		} 
+		}
 		else if ($page== "contact"){
 			cssBase("contact");
 			echo '<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">';
 			echo '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">';
+			echo '<link rel="stylesheet" href="../css/contact.css" type="text/css" media="screen">';
 			echo '<script src="../js/onglets.js"></script>';
 			jsBase("contact");
-		} 
+		}
         else if ($page== "compte"){
 			cssBase("compte");
 			echo '<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">';
@@ -76,7 +77,7 @@
 			echo '<link rel="stylesheet" href="../css/monCompte.css">';
 			echo '<script src="../js/validationForm.js"></script>';
 			jsBase("compte");
-		} 
+		}
         else if ($page== "connexionCompte"){
 			cssBase("compte");
 			echo '<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">';
@@ -84,7 +85,7 @@
 			echo '<link rel="stylesheet" href="../css/monCompte.css">';
 			//echo '<script src="../js/validationForm.js"></script>';
 			jsBase("compte");
-		} 
+		}
         else if ($page== "inscription" || $page =="connexion"){
 			cssBase("inscription");
 			echo '<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">';
@@ -94,9 +95,9 @@
 			//echo '<script src="../../js/validationFormIns.js"></script>';
 			jsBase("inscription");
 		}
-		
-		
-	
+
+
+
 		function cssBase($page){
 			$chemin = "";
 			if($page == "artiste" || $page == "oeuvre" || $page == "inscription" || $page =="connexion") {
@@ -131,9 +132,9 @@
 	<header class="appbar">
 
 		<a class="logo" href="/art-public-mtl/api/"><img src="<?php if($page == "artiste" || $page == "oeuvre" || $page == "inscription" || $page =="connexion"){echo "../";}?>../img/icons/logoAP.png" alt="Logo Art public Montréal"></a>
-		
+
 		<nav class="menu">
-			
+
 			<a class="lien" href="/art-public-mtl/api/oeuvre">
 			<i class="material-icons">photo</i>
 			<!-- <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/>
@@ -167,7 +168,7 @@
 			<!-- <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/><path d="M0 0h24v24H0z" fill="none"/></svg>						 -->
 				<p>Compte</p>
 			</a>
-		</nav>	
+		</nav>
 		<div class="icons">
 			<a class="search" href="#">
 				<i class="material-icons">search</i>
