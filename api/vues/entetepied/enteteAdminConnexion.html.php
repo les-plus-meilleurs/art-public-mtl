@@ -1,4 +1,4 @@
-
+﻿
 
 		<!DOCTYPE html>
 		<html lang="fr">
@@ -31,7 +31,7 @@
 	    
 			<header class="appbar">
 				 
-				<a class="logo" href="/art-public-mtl/api/"><img src="../../img/icons/logoAP.png" alt="Logo Art public Montréal"></a>				
+				<a class="logo" href="/art-public-mtl/api/"><img src="../../img/icons/LogoAPM.png" alt="Logo Art public Montréal"></a>				
 			</header>
 			<main>
 

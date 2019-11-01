@@ -8,8 +8,10 @@ function change_onglet(name)
         anc_onglet = name;
 }
 
-var anc_onglet = 'details';
+var anc_onglet;
 
 window.addEventListener("load", function() {
+    var idPremierOnglet = document.getElementsByClassName("onglet")[0].id;
+    anc_onglet = idPremierOnglet.substr(7);
     change_onglet(anc_onglet);
 });

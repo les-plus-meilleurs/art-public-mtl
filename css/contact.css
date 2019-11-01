@@ -1,0 +1,108 @@
+
+.carte_contact {
+  text-align: center;
+}
+
+.frame_carte {
+  width: 240px;
+  height: 180px;
+}
+
+@media screen and (min-width: 600px) {
+  .frame_carte {
+    width: 480px;
+    height: 360px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .frame_carte {
+    width: 800px;
+    height: 600px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .frame_carte {
+    width: 1000px;
+    height: 750px;
+  }
+}
+
+.pContact{
+    /* position: absolute;       */
+    width: 256px;
+    height: 20px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    font-family: Open sans;
+    font-style: normal;
+    color:var(--couleur-marine);
+    text-align: justify;
+    margin: 0px;
+}
+
+.btnContact{
+    width: 257px;
+    height: 39px;
+    background: #103C61;
+    border-radius: 5px;
+    font-size: 16px;
+    line-height: 22px;
+    font-family: Open sans;
+    font-style: normal;
+    color:var(--couleur-fond);
+}
+
+form{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+select {
+    font-size: 16px;
+    font-family: Open sans;
+    font-style: normal;
+    color:var(--couleur-marine);
+    text-align: justify;
+    margin: 0px;
+}
+
+.medias .icons{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.medias .icons svg{
+    width:30px;
+    height:30px;
+    /* background-color:var(--couleur-marine); */
+    /* padding: 10px; */
+    /* border-radius:48%; */
+}
+
+.medias .icons  a{
+    margin: var(--padding-base);
+    color:var(--couleur-fond);
+    padding: 8px;
+
+}
+
+.medias .icons a:nth-of-type(1){
+    background-color:var(--couleur-marine);
+    border-radius:48%;
+}
+
+.medias .icons a:nth-of-type(2){
+    background-color:var(--couleur-orange);
+    border-radius:48%;
+}
+
+.medias .icons a:nth-of-type(3){
+    background-color:var(--couleur-bleu);
+    border-radius:48%;
+}

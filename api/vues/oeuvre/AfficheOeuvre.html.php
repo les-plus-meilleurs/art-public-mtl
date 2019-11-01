@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8S4xg4xxyN0iGGBdUOpR3xRa4DIkD710&callback=initMap"
+=======
 
 <?php error_reporting(E_ALL ^ E_WARNING);  ?>
 <?php
@@ -17,6 +20,7 @@
     $text_date = $document->getElementById("dateCreation")->nodeValue;
 ?>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8S4xg4xxyN0iGGBdUOpR3xRa4DIkD710&callback=initMap"
+>>>>>>> d09b13fb623773256117e64277d11a109e916943
     async defer>
     </script>
 
@@ -27,11 +31,19 @@
 	<section class="oeuvre conteneur_partager">
 		<?php
 		extract($aData);
-
 //        echo "<pre>";
 //        print_r($aData);
 //        echo "</pre>";
 //        die;
+<<<<<<< HEAD
+    // if(isset($_SESSION["user"]) && $_SESSION['user']=='ok'){
+		// 					?>
+		 					<!-- <section class="compte uneOeuvre">
+		// 						<i class="material-icons aVisiter photo" data-vis="<?php// echo $aVisiter ?>" data-id="<?php //echo $id_oeuvre ?>">star_border</i>
+		// 						<i class="material-icons favori photo" data-id="<?php //echo $id_oeuvre ?>" data-fav="<?php// echo $favoris ?>" >favorite_border</i>
+		// 					</section> -->
+						<?php //} ?>
+=======
 
 
     // if(isset($_SESSION["user"]) && $_SESSION['user']=='ok'){
@@ -41,6 +53,7 @@
 		<!-- // 						<i class="material-icons favori photo" data-id="<?php echo $id_oeuvre ?>" data-fav="<?php echo $favoris ?>" >favorite_border</i> -->
 		<!-- // 					</section> -->
 							<?php// } ?>
+>>>>>>> d09b13fb623773256117e64277d11a109e916943
 		<h1 class="uneOeuvre_titre"><?php echo $titre?></h1>
 		<p><?php echo $description; ?></p>
 		<header class="image dummy">
@@ -84,15 +97,11 @@
             <p class="auteur"><a href="/art-public-mtl/api/artiste/<?php echo $id_artiste ?>"><?php
                 if(isset($nom) && $nom!=""){
               echo $prenom ." ". $nom;
-
             }
             else
             {
               echo $nomCollectif;
-
             }
-
-
                   ?></a></p>
 						<p class=""><?php if(isset($description)){echo $description;}else{echo "description non disponible.";} ?></p>
 					</section>
@@ -335,6 +344,48 @@
             map.setMapTypeId('styled_map');
             setMarkers(map);
         }
+<<<<<<< HEAD
+    //data oeuvres
+    function setMarkers(map)
+    {
+        var oeuvre = ["<?php echo $titre; ?>", <?php echo $coordonneeLatitude; ?>, <?php echo $coordonneeLongitude; ?>, "<?php echo $nom; ?>"];
+        //marqueur pour chaque oeuvre
+        var icon = {
+            url: "../../img/icons/mapmarker.png", // url
+             scaledSize: new google.maps.Size(28, 40), // size
+        };
+            //paramètres des marqueurs
+            var marker = new google.maps.Marker({
+                position: {lat: oeuvre[1], lng: oeuvre[2]},
+                map: map,
+                icon: icon,
+                title: oeuvre[0]
+            });
+            // Limites de la carte
+            var allowedBounds = new google.maps.LatLngBounds(
+                new google.maps.LatLng(45.4079982, -73.9446209),
+                new google.maps.LatLng(45.6876557, -73.5051969));
+                // Après avoir drag (glissé) le curseur
+                google.maps.event.addListener(map, 'dragend', function()
+                {
+                    if (allowedBounds.contains(map.getCenter())) return;
+                 // Rediriger la carte vers la dernière limite connue
+                 var c = map.getCenter(),
+                     x = c.lng(),
+                     y = c.lat(),
+                     maxX = allowedBounds.getNorthEast().lng(),
+                     maxY = allowedBounds.getNorthEast().lat(),
+                     minX = allowedBounds.getSouthWest().lng(),
+                     minY = allowedBounds.getSouthWest().lat();
+                 if (x < minX) x = minX;
+                 if (x > maxX) x = maxX;
+                 if (y < minY) y = minY;
+                 if (y > maxY) y = maxY;
+                 map.setCenter(new google.maps.LatLng(y, x));
+               });
+    }
+=======
+>>>>>>> d09b13fb623773256117e64277d11a109e916943
     </script>
 
     </div>
@@ -343,6 +394,17 @@
     <!-- <div class="conteneur_btn_partager"><a href="#" class="btn"><i class="material-icons">share</i>Partager</a></div> -->
 
 
+<<<<<<< HEAD
+    <div id="map" class="carte" style="height:230px; width:100%;"></div>
+
+				</div>
+			</div>
+		</div>
+
+		<!-- <div class="conteneur_btn_partager"><a href="#" class="btn"><i class="material-icons">share</i>Partager</a></div> -->
+
+=======
+>>>>>>> d09b13fb623773256117e64277d11a109e916943
 
 
     </section>

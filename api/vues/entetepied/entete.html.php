@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+﻿<?php error_reporting(E_ALL ^ E_WARNING);  ?>
+<!DOCTYPE html>
+<html lang="fr">    
+<?php
+   /* $document = cookie();
+	$text_lang = $document->getElementById("lang")->nodeValue;
+=======
 <?php error_reporting(E_ALL ^ E_WARNING);  ?>
 <!DOCTYPE html>
 <html lang="fr">    
@@ -5,6 +13,7 @@
     $document = cookie();
 
     $text_lang = $document->getElementById("lang")->nodeValue;
+>>>>>>> d09b13fb623773256117e64277d11a109e916943
     $text_titre2 = $document->getElementById("titre2")->nodeValue;
     $text_menu_oeuvres = $document->getElementById("menu_oeuvres")->nodeValue;
     $text_menu_artistes = $document->getElementById("menu_artistes")->nodeValue;
@@ -30,7 +39,11 @@
     $text_e_suj4 = $document->getElementById("e_suj4")->nodeValue;
     $text_e_commentaire = $document->getElementById("e_commentaire")->nodeValue;
     $text_e_envoyer = $document->getElementById("e_envoyer")->nodeValue;
+<<<<<<< HEAD
+    $text_e_medias = $document->getElementById("medias")->nodeValue;*/
+=======
     $text_e_medias = $document->getElementById("medias")->nodeValue;
+>>>>>>> d09b13fb623773256117e64277d11a109e916943
 ?>
 
 <head>
@@ -172,7 +185,7 @@
 <body>
 	<header class="appbar">
 
-		<a class="logo" href="/art-public-mtl/api/"><img src="<?php if($page == "artiste" || $page == "oeuvre" || $page == "inscription" || $page =="connexion"){echo "../";}?>../img/icons/logoAP.png" alt="Logo Art public Montréal"></a>
+		<a class="logo" href="/art-public-mtl/api/"><img src="<?php if($page == "artiste" || $page == "oeuvre" || $page == "inscription" || $page =="connexion"){echo "../";}?>../img/icons/LogoAPM.png" alt="Logo Art public Montréal"></a>
 		
 		<nav class="menu">
 			<a class="lien" href="/art-public-mtl/api/oeuvre">

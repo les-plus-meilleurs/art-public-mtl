@@ -19,12 +19,11 @@ window.addEventListener("load", function(){
         {
             if(mdp.match(mediumRegex))
             {
-                console.log("submit");
               form.submit(); 
             }
             else
             {
-            document.getElementById("msgErreurRegex").innerHTML="Votre mot de passe doit contenir au moins 8 caractères, une majuscule, une minuscule et un chiffre.";
+                document.getElementById("msgErreurRegex").innerHTML="Votre mot de passe doit contenir au moins 8 caractères, une majusucule, une minuscule et un chiffre.";
                event.preventDefault();
             }
         }

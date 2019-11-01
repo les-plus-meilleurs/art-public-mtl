@@ -22,7 +22,7 @@ class FavorisControlleur extends Controlleur
 	// GET : 
 	public function getAction(Requete $requete)
 	{
-        echo JSON_encode($requete->url_elements);
+        //echo JSON_encode($requete->url_elements);
         if(!empty($requete->url_elements)){
             $oFavoris = new Favoris();
             $oUser = new User();

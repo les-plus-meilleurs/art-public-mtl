@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Class Oeuvre
  * 
@@ -216,8 +216,6 @@ class Oeuvre extends Modele {
         O.Dimensions as dimensions,
         O.TechniqueAng as techniqueAng,
         i.NoImage,
-        F.id_user as favoris, 
-        V.id_user as aVisiter,
         O.Technique as technique FROM " . self::TABLE_OEUVRE . " O 
         LEFT JOIN " . self::TABLE_LIAISON_ARTISTE_OEUVRE . " AO ON O.id_oeuvre = AO.id_oeuvre 
         LEFT JOIN artiste A ON A.id_artiste = AO.id_artiste
@@ -228,8 +226,6 @@ class Oeuvre extends Modele {
         LEFT JOIN sous_categorie_oeuvre SC ON O.id_oeuvre=SC.id_oeuvre
         LEFT JOIN sous_categorie S ON SC.id_sous_categorie=S.id_sous_categorie
         LEFT JOIN ". self::TABLE_IMAGE ." i ON O.id_oeuvre = i.NoInterne
-        LEFT JOIN ". self::TABLE_FAVORIS ." F ON O.id_oeuvre = F.id_oeuvre
-        LEFT JOIN ". self::TABLE_A_VISITER ." V ON O.id_oeuvre = V.id_oeuvre
         WHERE O.id_oeuvre=$id";
 
 

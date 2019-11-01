@@ -23,7 +23,11 @@
     flex-direction: column;
   }
     .slide a .img {
+<<<<<<< HEAD
+/*        height: 270px;*/
+=======
         /* height: 270px; */
+>>>>>>> d09b13fb623773256117e64277d11a109e916943
         margin-bottom:5px;
         position:relative;
     }
@@ -141,7 +145,11 @@
     } */
     /*Agrandir height sections*/
     .slide a .img {
+<<<<<<< HEAD
+/*        height: 540px;*/
+=======
         /* height: 540px; */
+>>>>>>> d09b13fb623773256117e64277d11a109e916943
     }
     .prev, .next {
       top: 270px;

@@ -1,9 +1,13 @@
+<<<<<<< HEAD
+﻿<section class="recherche">
+=======
 <?php error_reporting(E_ALL ^ E_WARNING);  ?>
 <?php
     $document = cookie();
 ?>
 
 <section class="recherche">
+>>>>>>> d09b13fb623773256117e64277d11a109e916943
 	<div><i class="vueListe material-icons">list</i></div>
 	<div><i class="vueImage focus material-icons">photo</i></div>
 </section>
@@ -172,10 +176,14 @@ $listeLettres = array(0=>array("lettre"=>"A","ok"=>false),
 					}			
 			?>
 			<section class="oeuvre oeuvreText" data-id="<?php echo $id_oeuvre ?>">
+				<?php
+				if(isset($_SESSION["user"]) && $_SESSION['user']=='ok'){
+							?>
 				<section class="compteText">
 						<i class="material-icons aVisiter text" data-vis="<?php echo $aVisiter ?>" data-id="<?php echo $id_oeuvre ?>">star_border</i>
 						<i class="material-icons favori text" data-fav="<?php echo $favoris ?>"  data-id="<?php echo $id_oeuvre ?>">favorite_border</i>
 				</section>
+<?php } ?>
 				<a class="lienOeuvre lienArtisteA" href="oeuvre/<?php echo $id_oeuvre; ?>"><?php  echo $Titre;?></a>
 				
 					<?php 
@@ -224,9 +232,6 @@ $listeLettres = array(0=>array("lettre"=>"A","ok"=>false),
             <section class="oeuvres flex wrap">
 						<?php
         
-//echo '<pre>';
-//print_r($aData);
-//echo '</pre>';
                         $data2 = [];
 						foreach ($aData as $cle => $oeuvre) {
                             array_push($data2, $oeuvre);

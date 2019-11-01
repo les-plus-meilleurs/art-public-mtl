@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+﻿
+<?php 
+//  var_dump ($aData);
+=======
 <?php error_reporting(E_ALL ^ E_WARNING);  ?>
 <?php
     $document = cookie();
@@ -5,6 +10,7 @@
     $text_plus_info = $document->getElementById("plus_info")->nodeValue;
     $text_partager = $document->getElementById("partager")->nodeValue;
     $text_siteweb = $document->getElementById("siteweb")->nodeValue;
+>>>>>>> d09b13fb623773256117e64277d11a109e916943
 ?>
 <section class="retour txtLien">
     
@@ -17,20 +23,20 @@
     <p class="description"><?php echo $Description?></p>
 </section>
 <section class="sesOeuvres">
-    <div class="slider">
+    <h2>Oeuvres</h2>
         
 <?php
 //var_dump($aData['oeuvres']);	
 foreach ($aData['oeuvres'] as $cle => $oeuvre) {
 	extract($oeuvre);
 ?>
-<div class="slide slideA art fade">
+<section class="uneOeuvre">
 <?php
     echo "<a href='/art-public-mtl/api/oeuvre/".$id_oeuvre."'>";
 ?>
     <div class="img" data-img="<?php if(isset($NoImage) && !empty($NoImage)){ echo $NoImage;}else{ echo "default";}?>"></div>
 </a>
-<section class="infos">
+            <section class="infos">
                 <p class="titreDetail artiste"><?php echo $Titre; ?></p>
                 <p class="description"><?php echo $Description; ?></p>
                 <div class="txtLien">
@@ -38,21 +44,24 @@ foreach ($aData['oeuvres'] as $cle => $oeuvre) {
                     <a href="/art-public-mtl/api/oeuvre<?php echo $id_oeuvre; ?>"class="flecheLien">&#10095;</a>
                 </div>
             </section>
-        </div><?php
-}
-//Ne mettre les fleches que si il y a plus d'une oeuvre
-if(count($aData["oeuvres"])>1){
-?>
-<!-- Next and previous : fleches-->
-<a class="fleches flechesA prev">&#10094;</a>
-        <a class="fleches flechesA next">&#10095;</a>
-        <?php
-}
-?>
+<<<<<<< HEAD
 
-       
-    </div>
 </section>
+
+<?php
+=======
+        </div><?php
+>>>>>>> d09b13fb623773256117e64277d11a109e916943
+}
+
+
+?>
+       
+ 
+</section>
+<<<<<<< HEAD
+	
+=======
 			
     <section class="liensExt">
         <!-- <div class="reseaux btn">
@@ -67,4 +76,5 @@ if(count($aData["oeuvres"])>1){
     </section>
     
 
+>>>>>>> d09b13fb623773256117e64277d11a109e916943
 
